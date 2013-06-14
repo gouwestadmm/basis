@@ -111,8 +111,7 @@ $(function() {
 $(document).ready(function() {
   $('section').waypoint(function() {
    $(this).toggleClass("animate");
-    }, { offset: '45%',
-          triggerOnce: true });
+    }, { offset: '25%'});
 });
 
 
