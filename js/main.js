@@ -96,7 +96,23 @@ $("#btn-mc").click(function (e) {
   $(".mc-page-2").toggleClass("animate");
 });
 
+
 $("#btn-mc-close").click(function (e) {
    e.preventDefault();
   $(".mc-page-2").toggleClass("animate");
 });
+
+// Waypoints stuff
+
+$(function() {
+    $("header").toggleClass("animate");
+});
+
+$(document).ready(function() {
+  $('section').waypoint(function() {
+   $(this).toggleClass("animate");
+    }, { offset: '45%',
+          triggerOnce: true });
+});
+
+
