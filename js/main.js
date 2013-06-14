@@ -91,3 +91,17 @@ $("#nav-btn-close").click(function (e) {
 });
 
 
+// Waypoints stuff
+
+$(function() {
+    $("header").toggleClass("animate");
+});
+
+$(document).ready(function() {
+  $('section').waypoint(function() {
+   $(this).toggleClass("animate");
+    }, { offset: '45%',
+          triggerOnce: true });
+});
+
+
