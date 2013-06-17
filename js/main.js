@@ -113,7 +113,18 @@ $(function() {
 $(document).ready(function() {
   $('section').waypoint(function() {
    $(this).toggleClass("animate");
-    }, { offset: '25%'});
+    }, { offset: '35%'});
 });
 
+
+// Introductie vakjes openen
+$(".blokje").click(function (e) {
+   e.preventDefault();
+  $(".block-overlay").toggleClass("open");
+});
+
+$(".blokje-close").click(function (e) {
+   e.preventDefault();
+  $(".block-overlay").toggleClass("open");
+});
 
