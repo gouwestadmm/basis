@@ -117,3 +117,14 @@ $(document).ready(function() {
 });
 
 
+// Introductie vakjes openen
+$(".blokje").click(function (e) {
+   e.preventDefault();
+  $(".block-overlay").toggleClass("open");
+});
+
+$(".blokje-close").click(function (e) {
+   e.preventDefault();
+  $(".block-overlay").toggleClass("open");
+});
+
