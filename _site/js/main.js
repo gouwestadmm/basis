@@ -90,16 +90,18 @@ $("#nav-btn-close").click(function (e) {
   $(".body-overlay").toggleClass("visible");
 });
 
+
+
 // Fomulier mailchimp animatie
 $("#btn-mc").click(function (e) {
    e.preventDefault();
-  $(".mc-page-2").toggleClass("animate");
+  $(".mc-page-2").toggleClass("animate-open");
 });
 
 
 $("#btn-mc-close").click(function (e) {
    e.preventDefault();
-  $(".mc-page-2").toggleClass("animate");
+  $(".mc-page-2").toggleClass("animate-open");
 });
 
 // Waypoints stuff
