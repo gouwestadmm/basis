@@ -4824,6 +4824,17 @@ h6 {
 .signup {
   position: relative;
   padding: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.signup.animate {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: 0.5s;
+     -moz-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .signup .container {
