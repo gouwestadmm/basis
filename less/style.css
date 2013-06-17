@@ -4639,6 +4639,15 @@ h6 {
   font-size: 4.2em;
 }
 
+.intro {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.analytics {
+  font-size: 0.8em;
+}
+
 .icon-super {
   font-size: 5em;
   color: #428bca;
