@@ -113,7 +113,7 @@ $(function() {
 $(document).ready(function() {
   $('section').waypoint(function() {
    $(this).toggleClass("animate");
-    }, { offset: '25%'});
+    }, { offset: '35%'});
 });
 
 
