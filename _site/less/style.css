@@ -5040,3 +5040,23 @@ h6 {
   border-radius: 0;
   box-shadow: none;
 }
+
+.responsive-showcase {
+  background: url("../img/responsive-background.jpg") no-repeat center center fixed;
+}
+
+.responsive-showcase h1 {
+  color: #fff;
+}
+
+.responsive-showcase h3 {
+  color: #eeeeee;
+}
+
+.responsive-showcase h1 {
+  padding-top: 1.8em;
+}
+
+.bottom {
+  margin-bottom: -3em;
+}
