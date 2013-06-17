@@ -4663,6 +4663,53 @@ h6 {
   background-color: #eeeeee;
 }
 
+.btn-animated {
+  overflow: hidden;
+  color: #fff;
+  background: #428bca;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.btn-animated span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+          transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.btn-animated:hover:before {
+  left: 0;
+}
+
+.btn-animated:hover span {
+  -webkit-transform: translateX(200%);
+     -moz-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+}
+
+.btn-animated:before {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+          transition: all 0.3s;
+}
+
+.icon-mail:before {
+  content: "\f003";
+}
+
 .nav-btn {
   position: fixed;
   top: 0;
@@ -4800,7 +4847,7 @@ h6 {
 }
 
 #btn-mc {
-  color: #428bca;
+  color: #fff;
 }
 
 #btn-mc-close {
