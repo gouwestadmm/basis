@@ -29,7 +29,7 @@
 
 .mc-page-2 {
     background-color: @brand-primary;
-    transform: translateY(100%);
+    .translate(0,100%);
     color: #fff;
     transition: all 0.4s ease;
     h1, h2, h3 {
@@ -62,7 +62,7 @@
 
 // Transition Mailchimp formulier
 
-.mc-page.animate{
+.mc-page.animate-open{
     -webkit-animation: moveToTop .6s ease both;
     -moz-animation: moveToTop .6s ease both;
     animation: moveToTop .6s ease both;
