@@ -5,29 +5,46 @@
 	padding: 0.5em;
 	display:  block;
 	z-index: 100;
-	.graylighter();
+	background: @brand-primary;
+	color: #fff;
 }
 
 .nav-side{
 	.graydark();
 	position: fixed;
-	left: -15em;
+	left: -20em;
 	top: 0;
 	height: 100%;
-	width: 15em;
+	width: 20em;
 	display: block;
 	z-index: 200;
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	-ms-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	a{
-		color: #fff;
-		transition: all 0.2s ease;
+	h3{
+		font-size: 2em;
+		font-weight: 300;
+		padding: 0 1em;
+	}
+	li{
+		border-top: 1px solid rgba(255,255,255,0.05);
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		padding: 1em 0;
+	}
+	.nav li a{
+		color: rgba(255,255,255,0.5);
+		transition: all 0.2s;
+		font-weight: 300;
+		i{
+			padding-right: 1em;
+		}
 		&:hover{
-			color: @brand-primary;
-    		transition: all 0.2s ease;
+			color: #fff;
+    		transition: all 0.1s;
+    		background: @gray-dark;
 		}
 	}
 	&.visible{

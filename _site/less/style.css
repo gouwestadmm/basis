@@ -5442,19 +5442,21 @@ h6 {
   z-index: 100;
   display: block;
   padding: 0.5em;
-  background: #eeeeee;
+  color: #fff;
+  background: #428bca;
 }
 
 .nav-side {
   position: fixed;
   top: 0;
-  left: -15em;
+  left: -20em;
   z-index: 200;
   display: block;
-  width: 15em;
+  width: 20em;
   height: 100%;
   color: #fff;
   background: #333333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.3s ease;
      -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
@@ -5462,14 +5464,32 @@ h6 {
           transition: all 0.3s ease;
 }
 
-.nav-side a {
-  color: #fff;
-  transition: all 0.2s ease;
+.nav-side h3 {
+  padding: 0 1em;
+  font-size: 2em;
+  font-weight: 300;
 }
 
-.nav-side a:hover {
-  color: #428bca;
-  transition: all 0.2s ease;
+.nav-side li {
+  padding: 1em 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-side .nav li a {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s;
+}
+
+.nav-side .nav li a i {
+  padding-right: 1em;
+}
+
+.nav-side .nav li a:hover {
+  color: #fff;
+  background: #333333;
+  transition: all 0.1s;
 }
 
 .nav-side.visible {
@@ -5858,6 +5878,7 @@ h6 {
   position: relative;
   margin: 2em 0;
   overflow: hidden;
+  background: #ccc;
 }
 
 .portfolio figure img {
@@ -5870,7 +5891,6 @@ h6 {
   bottom: 0;
   width: 100%;
   padding: 0.3em 1em;
-  padding: 0.3em 0.6em;
   font-size: 80%;
   color: #fff;
   background: #5bc0de;
