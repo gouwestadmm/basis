@@ -92,7 +92,66 @@
 	margin-bottom: -3em;
 }
 
+<<<<<<< HEAD
 .vertical-center {
 	vertical-align: middle;
+=======
+
+//Portfolio section styles
+// animaties nog toevoegen aan animations.less bestand
+.portfolio{
+	figure{
+		position: relative;
+		overflow: hidden;
+		margin: 2em 0;
+		img{
+			-webkit-transition: -webkit-transform 0.4s;
+			-webkit-transition: -webkit-transform 0.4s;
+			-webkit-transition: -webkit-transform 0.4s;
+			-webkit-transition: -webkit-transform 0.4s;
+			transition: transform 0.4s;
+		}
+		figcaption{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 0.3em 1em;
+			border-top: 1px solid rgba(255,255,255,0.1);
+			padding: 0.3em 0.6em;
+			border-top: rgba(255,255,255,0.1);
+			font-size: 80%;
+			background: @brand-info;
+			color: #fff;
+			.translate(0,102%);
+			box-shadow: 0 0 2px rgba(0,0,0,0.1);
+
+			-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+			-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+			-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+			-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+			transition: transform 0.4s, opacity 0.1s 0.3s;
+			h5{
+				margin-bottom: 0;
+			}
+			span{
+				font-style: italic;
+			}
+		}
+		//hover styles
+		&:hover{
+			img{
+				.translate(0,-2em);
+			}
+			figcaption{
+				.translate(0,0);
+				-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+				-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+				-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+				-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+				transition: transform 0.4s, opacity 0.1s;
+			}
+		}
+	}
+>>>>>>> master
 }
 
