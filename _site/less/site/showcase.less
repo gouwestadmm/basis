@@ -1,0 +1,66 @@
+// Less voor responsive showcase
+
+.flexslider {
+    background: none;
+}
+
+.responsive-showcase {
+    background: url("../img/responsive-background.jpg") no-repeat center center fixed;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.nav-showcase {
+    background-color: #fff;
+    float: right;
+    padding-top: -4em;
+}
+
+.showcase-mac {
+    margin-bottom: -1em;
+    img {
+        position: absolute;
+    }
+}
+
+
+.showcase-mac {
+    .desktop{
+        .opacity(0);
+    }
+    .laptop {
+        .opacity(0);
+    }
+    .tablet {
+        .opacity(0);
+    }
+    .tablet-mini {
+        .opacity(0);
+    }
+    .phone {
+        .opacity(0);
+    }
+    &.flex-active-slide {
+        .desktop {
+            .opacity(1);
+            transition: 2s 3s ease;
+            }
+        .laptop {
+            .opacity(1);
+            transition: 2s 4s ease;
+        }
+        .tablet {
+            .opacity(1);
+            transition: 2s 5s ease;
+        }
+        .tablet-mini {
+            .opacity(1);
+            transition: 2s 6s ease;
+        }
+        .phone {
+            .opacity(1);
+            transition: 2s 7s ease;
+        }
+    }
+}

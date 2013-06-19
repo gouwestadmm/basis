@@ -10,6 +10,7 @@
 @import "site/backgrounds.less";	//Background images and colors	
 @import "site/responsive.less";		//Gouwestad Bootstrap Responsive customizations
 @import "site/signup.less";			//Mailchimp signup formulier
+@import "site/showcase.less";		//Responsive showcase
 
 
 //Site specific story styles
@@ -87,23 +88,13 @@
 	box-shadow: none;
 }
 
-.responsive-showcase {
-	background: url("../img/responsive-background.jpg") no-repeat center center fixed;
-	h1 {
-		color: #fff;
-	}
-	h3 {
-		color: @gray-lighter;
-	}
-	h1 {
-		padding-top: 1.8em;
-	}
-}
-
 .bottom {
 	margin-bottom: -3em;
 }
 
+.vertical-center {
+	vertical-align: middle;
+}
 
 //Portfolio section styles
 // animaties nog toevoegen aan animations.less bestand
@@ -112,6 +103,7 @@
 		position: relative;
 		overflow: hidden;
 		margin: 2em 0;
+		background: #ccc;
 		img{
 			-webkit-transition: -webkit-transform 0.4s;
 			-webkit-transition: -webkit-transform 0.4s;
@@ -125,7 +117,7 @@
 			width: 100%;
 			padding: 0.3em 1em;
 			border-top: 1px solid rgba(255,255,255,0.1);
-			padding: 0.3em 0.6em;
+			padding: 0.3em 1em;
 			border-top: rgba(255,255,255,0.1);
 			font-size: 80%;
 			background: @brand-info;
@@ -160,5 +152,6 @@
 			}
 		}
 	}
+
 }
 

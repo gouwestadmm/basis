@@ -128,3 +128,9 @@ $(".blokje-close").click(function (e) {
   $(".block-overlay").toggleClass("open");
 });
 
+
+$("#slide-desktop-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(0);
+});
+
