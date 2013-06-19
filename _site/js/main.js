@@ -128,6 +128,20 @@ $(".blokje-close").click(function (e) {
   $(".block-overlay").toggleClass("open");
 });
 
+//Responsive showcase nav
+$("#slide-desktop-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(1);
+});
+
+$("#slide-laptop-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(2);
+});
+
+$("#slide-mobile-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(3);
 
 $("#slide-desktop-btn").click(function (e) {
    e.preventDefault();
