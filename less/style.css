@@ -4824,6 +4824,7 @@ h6 {
 .signup {
   position: relative;
   padding: 0;
+  overflow: hidden;
   opacity: 0;
   filter: alpha(opacity=0);
 }
@@ -5059,4 +5060,62 @@ h6 {
 
 .bottom {
   margin-bottom: -3em;
+}
+
+.portfolio figure {
+  position: relative;
+  margin: 2em 0;
+  overflow: hidden;
+}
+
+.portfolio figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+          transition: transform 0.4s;
+}
+
+.portfolio figure figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.3em 1em;
+  padding: 0.3em 0.6em;
+  font-size: 80%;
+  color: #fff;
+  background: #5bc0de;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: rgba(255, 255, 255, 0.1);
+  -webkit-transform: translate(0, 102%);
+     -moz-transform: translate(0, 102%);
+      -ms-transform: translate(0, 102%);
+       -o-transform: translate(0, 102%);
+          transform: translate(0, 102%);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+          transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.portfolio figure figcaption h5 {
+  margin-bottom: 0;
+}
+
+.portfolio figure figcaption span {
+  font-style: italic;
+}
+
+.portfolio figure:hover img {
+  -webkit-transform: translate(0, -2em);
+     -moz-transform: translate(0, -2em);
+      -ms-transform: translate(0, -2em);
+       -o-transform: translate(0, -2em);
+          transform: translate(0, -2em);
+}
+
+.portfolio figure:hover figcaption {
+  -webkit-transform: translate(0, 0);
+     -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+          transition: transform 0.4s, opacity 0.1s;
 }
