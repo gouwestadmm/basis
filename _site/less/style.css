@@ -5850,10 +5850,10 @@ h6 {
   margin-bottom: -3em;
 }
 
-<<<<<<< HEAD
 .vertical-center {
   vertical-align: middle;
-=======
+}
+
 .portfolio figure {
   position: relative;
   margin: 2em 0;
@@ -5910,5 +5910,4 @@ h6 {
           transform: translate(0, 0);
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
           transition: transform 0.4s, opacity 0.1s;
->>>>>>> master
 }
