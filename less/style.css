@@ -4602,17 +4602,9 @@ h1 {
   font-size: 4em;
 }
 
-h1 span {
-  font-weight: bold;
-}
-
 h2 {
   margin-bottom: 0.5em;
   font-size: 3.2em;
-}
-
-h2 span {
-  font-weight: bold;
 }
 
 h3 {
@@ -4958,6 +4950,86 @@ h6 {
   }
 }
 
+.flexslider {
+  background: none;
+}
+
+.responsive-showcase {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #fff;
+  background: url("../img/responsive-background.jpg") no-repeat center center fixed;
+}
+
+.nav-showcase {
+  float: right;
+  padding-top: -4em;
+  background-color: #fff;
+}
+
+.showcase-mac {
+  margin-bottom: -1em;
+}
+
+.showcase-mac img {
+  position: absolute;
+}
+
+.showcase-mac .desktop {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.showcase-mac .laptop {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.showcase-mac .tablet {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.showcase-mac .tablet-mini {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.showcase-mac .phone {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.showcase-mac.flex-active-slide .desktop {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition: 2s 3s ease;
+}
+
+.showcase-mac.flex-active-slide .laptop {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition: 2s 4s ease;
+}
+
+.showcase-mac.flex-active-slide .tablet {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition: 2s 5s ease;
+}
+
+.showcase-mac.flex-active-slide .tablet-mini {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition: 2s 6s ease;
+}
+
+.showcase-mac.flex-active-slide .phone {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition: 2s 7s ease;
+}
+
 .jumbotron {
   background: none;
 }
@@ -5041,22 +5113,10 @@ h6 {
   box-shadow: none;
 }
 
-.responsive-showcase {
-  background: url("../img/responsive-background.jpg") no-repeat center center fixed;
-}
-
-.responsive-showcase h1 {
-  color: #fff;
-}
-
-.responsive-showcase h3 {
-  color: #eeeeee;
-}
-
-.responsive-showcase h1 {
-  padding-top: 1.8em;
-}
-
 .bottom {
   margin-bottom: -3em;
+}
+
+.vertical-center {
+  vertical-align: middle;
 }
