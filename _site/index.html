@@ -39,6 +39,53 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
         <script src="http://localhost:4000/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <script src="http://localhost:4000/js/vendor/morphingdevice.js"></script>
+        <script>
+          var el = document.querySelector( '.md-slider' ),
+            settings = {
+              autoplay : true,
+              interval : 3000,
+              devices : [ 
+                { cName : 'md-device-1', canRotate : false, imgsrc : '../img/responsive/site1.jpg' },
+                { cName : 'md-device-2', canRotate : false, imgsrc : '../img/responsive/site2.jpg' },
+                { cName : 'md-device-3', canRotate : true, imgsrc : '../img/responsive/site3.jpg', rotatedsrc : '../img/responsive/site3r.jpg' },
+                { cName : 'md-device-4', canRotate : true, imgsrc : '../img/responsive/site4.jpg', rotatedsrc : '../img/responsive/site4r.jpg' }
+              ]
+            },
+            devicesTotal = settings.devices.length,
+            ds = MorphingDevice( el, settings );
+
+          // create navigation triggers
+          var nav = document.createElement( 'nav' );
+          for( var i = 0; i < devicesTotal; ++i ) {
+
+            var trigger = document.createElement( 'a' );
+            trigger.className = i === 0 ? 'md-current' : '';
+            trigger.setAttribute( 'href', '#' );
+            trigger.setAttribute( 'pos', i );
+            trigger.onclick = function( event ) {
+
+              ds.stopSlideshow();
+              var pos = Number( event.target.getAttribute( 'pos' ) );
+              if( pos === ds.getCurrent() ) {
+                return false;
+              }
+              ds.updateCurrentTrigger( event.target );
+              ds.setCurrent( pos );
+              ds.changeDevice();
+              return false;
+
+            };
+            nav.appendChild( trigger );
+
+          }
+          el.appendChild( nav );
+
+          if( settings.autoplay ) {
+            ds.startSlideshow();
+          }
+        </script>
     </head>
 
     <body id="">
@@ -138,9 +185,50 @@
                 <div class="col-12 text-center">
                     <h1>Responsive is uit</h1> 
                     <h3>Wij noemen het <strong>Responsive++</strong></h3>
-                    <img class="bottom" src="img/imac.png">
                 </div>
             </div>
+        </div>
+        <div class="flexslider">
+          <ul class="slides">
+            <li class="showcase-mac">
+                <div class="container"> 
+                    <div class="col-8 responsive-design"> 
+                        <img class="desktop" src="img/responsive/desktop.png">
+                        <img class="laptop" src="img/responsive/laptop.png">
+                        <img class="tablet" src="img/responsive/tablet.png">
+                        <img class="tablet-mini" src="img/responsive/tablet-mini.png">
+                        <img class="phone" src="img/responsive/phone.png">
+                    </div>
+                    <div class="col-4">
+                        <h6>Responsive is standaard</h6>
+                        <p>Alle websites worden responsive opgeleverd, met enkele toevoegingen waardoor het nog beter werkt.</p>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                    </div>
+                </div>
+            </li>
+            <li class="showcase-ipad">
+                <div class="container"> 
+                    <div class="col-7 responsive-design"> 
+                        <img class="desktop" src="img/responsive/desktop.png">
+                    </div>
+                    <div class="col-5">
+                        <h6>Desktop</h6>
+                        <p>Revolutionair. Van het kleinste beeldscherm tot de allergrootste, altijd 'op maat'. </p>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                    </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-showcase">
+            <ul class="nav navbar">
+                <li>Kies een device: </li>
+                <li><a href="#">Desktop <i class="icon-desktop"></i></a></li>
+                <li><a href="#">Laptop <i class="icon-laptop"></i></a></li>
+                <li><a href="#">Tablet <i class="icon-tablet"></i></a></li>
+                <li><a href="#">Telefoon <i class="icon-mobile-phone"></i></a></li>
+            </ul>
         </div>
     </section>
 
@@ -343,6 +431,7 @@
     </section>
 
 
+
             <footer>
                 <div class="container text-center">
                     <p>&copy; Company 2012</p>
@@ -364,7 +453,12 @@
         <!-- Start the slider up -->
         <script type="text/javascript" charset="utf-8">
           $(window).load(function() {
-            $('.flexslider').flexslider();
+            $('.flexslider').flexslider({
+              animation: "slide",
+              after: function(slider) {
+                $('.current-slide').toggleClass(animate);
+              }
+            });
           });
         </script>
 
