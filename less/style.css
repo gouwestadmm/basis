@@ -5068,7 +5068,8 @@ h6 {
 }
 
 .portfolio figure img {
-  transition: transform 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
+          transition: transform 0.4s;
 }
 
 .portfolio figure figcaption {
@@ -5078,16 +5079,29 @@ h6 {
   padding: 0.3em 0.6em;
   color: #fff;
   background: #333333;
-  transform: translateY(100%);
-  transition: transform 0.4s, opacity 0.1s 0.3s;
+  -webkit-transform: translate(0, 102%);
+     -moz-transform: translate(0, 102%);
+      -ms-transform: translate(0, 102%);
+       -o-transform: translate(0, 102%);
+          transform: translate(0, 102%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+          transition: transform 0.4s, opacity 0.1s 0.3s;
 }
 
 .portfolio figure:hover img {
-  transform: translateY(-2.5em);
+  -webkit-transform: translate(0, -2.5em);
+     -moz-transform: translate(0, -2.5em);
+      -ms-transform: translate(0, -2.5em);
+       -o-transform: translate(0, -2.5em);
+          transform: translate(0, -2.5em);
 }
 
 .portfolio figure:hover figcaption {
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 0.4s, opacity 0.1s;
+  -webkit-transform: translate(0, 0);
+     -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+          transition: transform 0.4s, opacity 0.1s;
 }
