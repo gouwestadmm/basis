@@ -5060,3 +5060,34 @@ h6 {
 .bottom {
   margin-bottom: -3em;
 }
+
+.portfolio figure {
+  position: relative;
+  margin: 2em 0;
+  overflow: hidden;
+}
+
+.portfolio figure img {
+  transition: transform 0.4s;
+}
+
+.portfolio figure figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.3em 0.6em;
+  color: #fff;
+  background: #333333;
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.portfolio figure:hover img {
+  transform: translateY(-2.5em);
+}
+
+.portfolio figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.4s, opacity 0.1s;
+}
