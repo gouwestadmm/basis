@@ -5078,10 +5078,12 @@ h6 {
   bottom: 0;
   width: 100%;
   padding: 0.3em 1em;
+  padding: 0.3em 0.6em;
   font-size: 80%;
   color: #fff;
   background: #5bc0de;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: rgba(255, 255, 255, 0.1);
   -webkit-transform: translate(0, 102%);
      -moz-transform: translate(0, 102%);
       -ms-transform: translate(0, 102%);
