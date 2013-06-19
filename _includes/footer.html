@@ -19,7 +19,12 @@
         <!-- Start the slider up -->
         <script type="text/javascript" charset="utf-8">
           $(window).load(function() {
-            $('.flexslider').flexslider();
+            $('.flexslider').flexslider({
+              animation: "slide",
+              after: function(slider) {
+                $('.current-slide').toggleClass(animate);
+              }
+            });
           });
         </script>
 
