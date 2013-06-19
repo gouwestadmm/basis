@@ -5441,7 +5441,8 @@ h6 {
   left: 0;
   z-index: 100;
   display: block;
-  padding: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
   color: #fff;
   background: #428bca;
 }
