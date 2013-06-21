@@ -144,3 +144,4 @@ $("#slide-mobile-btn").click(function (e) {
   $('.flexslider').flexslider(3);
   });
 
+
