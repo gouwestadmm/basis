@@ -80,16 +80,24 @@ $(document).ready(function() {
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
-  $("#slide-nav").toggleClass("visible");
-  $(".body-overlay").toggleClass("visible");
+  $("#slide-nav, .body-overlay").toggleClass("visible");
 });
 
 $("#nav-btn-close").click(function (e) {
    e.preventDefault();
-  $("#slide-nav").toggleClass("visible");
-  $(".body-overlay").toggleClass("visible");
+  $("#slide-nav, .body-overlay").toggleClass("visible");
 });
 
+// add touc support for sliding nav
+$(document).ready(function() {
+  $('#page-container').hammer().on("swiperight", function(event) {
+          $('#slide-nav, .body-overlay, #page-container').toggleClass('visible');  
+      });
+  $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(event) {
+          $('#slide-nav, .body-overlay, #page-container').toggleClass('visible');  
+      });
+
+});
 
 
 // Fomulier mailchimp animatie
