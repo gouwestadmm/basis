@@ -5526,19 +5526,6 @@ h6 {
   border-radius: 0;
 }
 
-.page-container {
-  position: relative;
-  left: 0;
-  -webkit-transition: 0.3s;
-     -moz-transition: 0.3s;
-       -o-transition: 0.3s;
-          transition: 0.3s;
-}
-
-.page-container.visible {
-  left: 20em;
-}
-
 .body-overlay {
   position: fixed;
   top: 0;
