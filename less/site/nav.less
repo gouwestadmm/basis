@@ -74,9 +74,13 @@
 
 #page-container{
 	.transition(0.3s);
+	position: fixed;
+	width: 100%;
+	overflow: scroll;
+	left: 0;
+	-webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
 		&.visible{
-		margin-left: 20em;	
-		width: 100%;
+		left: 20em;	
 		}
 }
 .body-overlay{
