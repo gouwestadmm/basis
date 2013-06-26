@@ -95,6 +95,7 @@ $(document).ready(function() {
   $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(event) {
           $('#slide-nav, .body-overlay, #page-container').removeClass('visible');  
       });
+  
 
 });
 
