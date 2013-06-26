@@ -76,6 +76,7 @@ $(document).ready(function() {
 });
 
 
+
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
@@ -89,6 +90,11 @@ $("#nav-btn-close").click(function (e) {
 
 // add touch support for sliding nav
 $(document).ready(function() {
+  
+var hammertime = Hammer(document.getElementById('page-container'), {
+        prevent_default: true,
+    });
+
   $('#page-container').hammer().on("swiperight", function(event) {
           event.preventDefault();
           $('#slide-nav, .body-overlay, #page-container').addClass('visible');  
