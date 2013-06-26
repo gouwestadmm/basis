@@ -101,6 +101,7 @@ $(document).ready(function() {
 
 });
 
+
 // On slide-nav links click close side menu
 $(".menu-link").click(function () {
   $('#slide-nav, .body-overlay, #page-container').removeClass('visible'); 
