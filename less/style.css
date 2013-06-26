@@ -5445,6 +5445,14 @@ h6 {
   font-size: 1.2em;
   color: #fff;
   background: #428bca;
+  -webkit-transition: 0.3s;
+     -moz-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.nav-btn.visible {
+  left: 16.666667em;
 }
 
 .nav-side {
