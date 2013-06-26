@@ -76,7 +76,6 @@ $(document).ready(function() {
 });
 
 
-
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
@@ -88,17 +87,21 @@ $("#nav-btn-close").click(function (e) {
   $("#slide-nav, .body-overlay, #page-container").toggleClass("visible");
 });
 
-// add touc support for sliding nav
+// add touch support for sliding nav
 $(document).ready(function() {
   $('#page-container').hammer().on("swiperight", function(event) {
-          $('#slide-nav, .body-overlay, #page-container').toggleClass('visible');  
+          $('#slide-nav, .body-overlay, #page-container').addClass('visible');  
       });
   $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(event) {
-          $('#slide-nav, .body-overlay, #page-container').toggleClass('visible');  
+          $('#slide-nav, .body-overlay, #page-container').removeClass('visible');  
       });
 
 });
 
+// On slide-nav links click close side menu
+$(".menu-link").click(function () {
+  $('#slide-nav, .body-overlay, #page-container').removeClass('visible'); 
+});
 
 // Fomulier mailchimp animatie
 $("#btn-mc").click(function (e) {
