@@ -72,7 +72,13 @@
 	}
 }
 
-
+#page-container{
+	.transition(0.3s);
+		&.visible{
+		margin-left: 20em;	
+		margin-right: -20em;
+		}
+}
 .body-overlay{
 	background: rgba(0,0,0,0.4);
 	position: fixed;

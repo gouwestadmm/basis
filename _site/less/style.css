@@ -5518,6 +5518,18 @@ h6 {
   border-radius: 0;
 }
 
+#page-container {
+  -webkit-transition: 0.3s;
+     -moz-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
+}
+
+#page-container.visible {
+  margin-right: -20em;
+  margin-left: 20em;
+}
+
 .body-overlay {
   position: fixed;
   top: 0;
@@ -5838,6 +5850,11 @@ h6 {
   line-height: 1.5em;
 }
 
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 .jumbotron {
   background: none;
 }
@@ -5927,6 +5944,10 @@ h6 {
 
 .vertical-center {
   vertical-align: middle;
+}
+
+.flexslider {
+  overflow: hidden;
 }
 
 .portfolio figure {
