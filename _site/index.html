@@ -40,52 +40,7 @@
 
         <script src="http://localhost:4000/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-        <script src="http://localhost:4000/js/vendor/morphingdevice.js"></script>
-        <script>
-          var el = document.querySelector( '.md-slider' ),
-            settings = {
-              autoplay : true,
-              interval : 3000,
-              devices : [ 
-                { cName : 'md-device-1', canRotate : false, imgsrc : '../img/responsive/site1.jpg' },
-                { cName : 'md-device-2', canRotate : false, imgsrc : '../img/responsive/site2.jpg' },
-                { cName : 'md-device-3', canRotate : true, imgsrc : '../img/responsive/site3.jpg', rotatedsrc : '../img/responsive/site3r.jpg' },
-                { cName : 'md-device-4', canRotate : true, imgsrc : '../img/responsive/site4.jpg', rotatedsrc : '../img/responsive/site4r.jpg' }
-              ]
-            },
-            devicesTotal = settings.devices.length,
-            ds = MorphingDevice( el, settings );
-
-          // create navigation triggers
-          var nav = document.createElement( 'nav' );
-          for( var i = 0; i < devicesTotal; ++i ) {
-
-            var trigger = document.createElement( 'a' );
-            trigger.className = i === 0 ? 'md-current' : '';
-            trigger.setAttribute( 'href', '#' );
-            trigger.setAttribute( 'pos', i );
-            trigger.onclick = function( event ) {
-
-              ds.stopSlideshow();
-              var pos = Number( event.target.getAttribute( 'pos' ) );
-              if( pos === ds.getCurrent() ) {
-                return false;
-              }
-              ds.updateCurrentTrigger( event.target );
-              ds.setCurrent( pos );
-              ds.changeDevice();
-              return false;
-
-            };
-            nav.appendChild( trigger );
-
-          }
-          el.appendChild( nav );
-
-          if( settings.autoplay ) {
-            ds.startSlideshow();
-          }
-        </script>
+      
     </head>
 
     <body id="">
@@ -460,7 +415,7 @@
         <script src="http://localhost:4000/js/main.js"></script>
 
         <!-- Touch script -->
-        <!--<script src="http://localhost:4000/js/vendor/hammer.min.js"></script>-->
+        <script src="http://localhost:4000/js/vendor/hammer.min.js"></script>
         <script src="http://localhost:4000/js/vendor/jquery.hammer.js"></script>
 
                 <!-- Slider script & styles -->
