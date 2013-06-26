@@ -90,17 +90,13 @@ $("#nav-btn-close").click(function (e) {
 
 // add touch support for sliding nav
 $(document).ready(function() {
-  
-var hammertime = Hammer(document.getElementById('page-container'), {
-        prevent_default: true,
-    });
 
-  $('#page-container').hammer().on("swiperight", function(event) {
-          event.preventDefault();
+  $('#page-container').hammer().on("swiperight", function(ev) {
+          ev.preventDefault();
           $('#slide-nav, .body-overlay, #page-container').addClass('visible');  
       });
-  $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(event) {
-       event.preventDefault();
+  $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(ev) {
+       ev.preventDefault();
           $('#slide-nav, .body-overlay, #page-container').removeClass('visible');  
       });
 
