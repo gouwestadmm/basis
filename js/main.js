@@ -90,9 +90,11 @@ $("#nav-btn-close").click(function (e) {
 // add touch support for sliding nav
 $(document).ready(function() {
   $('#page-container').hammer().on("swiperight", function(event) {
+          event.preventDefault();
           $('#slide-nav, .body-overlay, #page-container').addClass('visible');  
       });
   $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(event) {
+       event.preventDefault();
           $('#slide-nav, .body-overlay, #page-container').removeClass('visible');  
       });
 
