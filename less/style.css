@@ -5519,15 +5519,19 @@ h6 {
 }
 
 #page-container {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  overflow: scroll;
   -webkit-transition: 0.3s;
      -moz-transition: 0.3s;
        -o-transition: 0.3s;
           transition: 0.3s;
+  -webkit-overflow-scrolling: touch;
 }
 
 #page-container.visible {
-  width: 100%;
-  margin-left: 20em;
+  left: 20em;
 }
 
 .body-overlay {
@@ -5848,11 +5852,6 @@ h6 {
 
 .showcase-mobile p {
   line-height: 1.5em;
-}
-
-body {
-  overflow: scroll;
-  overflow-x: hidden;
 }
 
 .jumbotron {
