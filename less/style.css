@@ -5526,8 +5526,8 @@ h6 {
 }
 
 #page-container.visible {
-  left: 20em;
   width: 100%;
+  margin-left: 20em;
 }
 
 .body-overlay {
