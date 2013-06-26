@@ -80,12 +80,12 @@ $(document).ready(function() {
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
-  $("#slide-nav, .body-overlay").toggleClass("visible");
+  $("#slide-nav, .body-overlay, #page-container").toggleClass("visible");
 });
 
 $("#nav-btn-close").click(function (e) {
    e.preventDefault();
-  $("#slide-nav, .body-overlay").toggleClass("visible");
+  $("#slide-nav, .body-overlay, #page-container").toggleClass("visible");
 });
 
 // add touc support for sliding nav
