@@ -8,6 +8,10 @@
 	z-index: 100;
 	background: @brand-primary;
 	color: #fff;
+	.transition(0.3s);
+	&.visible{
+		left: 16.666667em;
+	}
 }
 
 .nav-side{
@@ -72,13 +76,12 @@
 	}
 }
 
-#page-container{
+.page-container{
 	.transition(0.3s);
+	left: 0;
 	position: fixed;
 	width: 100%;
-	overflow: scroll;
-	left: 0;
-	-webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+	height: 100%;
 		&.visible{
 		left: 20em;	
 		}

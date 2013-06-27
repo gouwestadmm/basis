@@ -40,52 +40,7 @@
 
         <script src="http://localhost:4000/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-        <script src="http://localhost:4000/js/vendor/morphingdevice.js"></script>
-        <script>
-          var el = document.querySelector( '.md-slider' ),
-            settings = {
-              autoplay : true,
-              interval : 3000,
-              devices : [ 
-                { cName : 'md-device-1', canRotate : false, imgsrc : '../img/responsive/site1.jpg' },
-                { cName : 'md-device-2', canRotate : false, imgsrc : '../img/responsive/site2.jpg' },
-                { cName : 'md-device-3', canRotate : true, imgsrc : '../img/responsive/site3.jpg', rotatedsrc : '../img/responsive/site3r.jpg' },
-                { cName : 'md-device-4', canRotate : true, imgsrc : '../img/responsive/site4.jpg', rotatedsrc : '../img/responsive/site4r.jpg' }
-              ]
-            },
-            devicesTotal = settings.devices.length,
-            ds = MorphingDevice( el, settings );
-
-          // create navigation triggers
-          var nav = document.createElement( 'nav' );
-          for( var i = 0; i < devicesTotal; ++i ) {
-
-            var trigger = document.createElement( 'a' );
-            trigger.className = i === 0 ? 'md-current' : '';
-            trigger.setAttribute( 'href', '#' );
-            trigger.setAttribute( 'pos', i );
-            trigger.onclick = function( event ) {
-
-              ds.stopSlideshow();
-              var pos = Number( event.target.getAttribute( 'pos' ) );
-              if( pos === ds.getCurrent() ) {
-                return false;
-              }
-              ds.updateCurrentTrigger( event.target );
-              ds.setCurrent( pos );
-              ds.changeDevice();
-              return false;
-
-            };
-            nav.appendChild( trigger );
-
-          }
-          el.appendChild( nav );
-
-          if( settings.autoplay ) {
-            ds.startSlideshow();
-          }
-        </script>
+      
     </head>
 
     <body id="">
@@ -112,9 +67,6 @@
 		</a>
 	</div>
 	<div class="nav-side" id="slide-nav">
-		<a href="#" class="nav-btn-side" id="nav-btn-close">
-			<i class="icon-remove"></i>
-		</a>
 		<h3>Gouwestad sites</h3>
 		<ul class="nav nav-pills nav-stacked">
 		    <li><a href="#" class="menu-link"><i class="icon-thumbs-up"></i>  Een nieuw soort <strong>website</strong></a></li>
@@ -124,9 +76,8 @@
 		    <li><a href="#" class="menu-link"><i class="icon-eur"></i> Betaalbaar en <strong>snel</strong></a></li>
 		</ul>
 	</div>
+    <div class="page-container">
 
-
-<div id="page-container">
     <header>
         <div class="container">
             <div class="jumbotron text-center">
@@ -193,26 +144,28 @@
         </div>
         <div class="flexslider">
           <ul class="slides">
-            <li class="showcase-mac">
+            <li class="showcase-devices">
                 <div class="container"> 
-                    <div class="col-8 responsive-design"> 
-                        <img class="desktop" src="img/responsive/desktop.png">
-                        <img class="laptop" src="img/responsive/laptop.png">
-                        <img class="tablet" src="img/responsive/tablet.png">
-                        <img class="tablet-mini" src="img/responsive/tablet-mini.png">
-                        <img class="phone" src="img/responsive/phone.png">
-                    </div>
-                    <div class="col-4">
-                        <h6>Responsive is standaard</h6>
-                        <p>Alle websites worden responsive opgeleverd, met enkele toevoegingen waardoor het nog beter werkt.</p>
-                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                    <div class="row vert-box">
+                        <div class="col-7 responsive-design"> 
+                            <img class="desktop" src="img/responsive/desktop.png">
+                            <img class="laptop" src="img/responsive/laptop.png">
+                            <img class="tablet" src="img/responsive/tablet.png">
+                            <img class="tablet-mini" src="img/responsive/tablet-mini.png">
+                            <img class="phone" src="img/responsive/phone.png">
+                        </div>
+                        <div class="col-5 vert-middle">
+                            <h6>Responsive is standaard</h6>
+                            <p>Alle websites worden responsive opgeleverd, met enkele toevoegingen waardoor het nog beter werkt.</p>
+                            <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                        </div>
                     </div>
                 </div>
             </li>
-            <li class="showcase-ipad">
+            <li class="showcase-dekstop">
                 <div class="container"> 
                     <div class="col-7 responsive-design"> 
-                        <img class="desktop" src="img/responsive/desktop.png">
+                        <img src="img/desktop.png">
                     </div>
                     <div class="col-5">
                         <h6>Desktop</h6>
@@ -221,19 +174,47 @@
                     </div>
                 </div>
             </li>
+            <li class="showcase-laptop">
+                <div class="container"> 
+                    <div class="col-7 responsive-design"> 
+                        <img src="img/laptop.png">
+                    </div>
+                    <div class="col-5">
+                        <h6>Laptop</h6>
+                        <p>Ook laptops varieren tegenwoordig van zakformaat 11 inch tot 19 inch. </p>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                    </div>
+                </div>
+            </li>
+            <li class="showcase-mobile">
+                <div class="container"> 
+                    <div class="col-7 responsive-design"> 
+                        <img src="img/tablet.png">
+                        <img src="img/tablet-mini.png">
+                        <img src="img/phone.png">
+                    </div>
+                    <div class="col-5">
+                        <h6>Mobiel</h6>
+                        <p>Naast de 'gewone' tablets zijn er ook 7 inch tablets, en een batterij aan verschillende telefoonschermen</p>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                    </div>
+                </div>
+            </li>
           </ul>
         </div>
-
+    </section>
+    <div class="row">
+        <div class="col-12 nav-showcase">
         <div class="nav-showcase">
-            <ul class="nav navbar">
-                <li>Kies een device: </li>
+            <ul class="nav nav-pills">
+                <li><a>Kies een device: </a></li>
                 <li><a href="#" id="slide-desktop-btn">Desktop <i class="icon-desktop"></i></a></li>
-                <li><a href="#">Laptop <i class="icon-laptop"></i></a></li>
-                <li><a href="#">Tablet <i class="icon-tablet"></i></a></li>
-                <li><a href="#">Telefoon <i class="icon-mobile-phone"></i></a></li>
+                <li><a href="#" id="slide-laptop-btn">Laptop <i class="icon-laptop"></i></a></li>
+                <li><a href="#" id="slide-mobile-btn">Mobiel <i class="icon-tablet"></i> <i class="icon-mobile-phone"></i></a></li>
             </ul>
         </div>
-    </section>
+    </div>
+    </div>
 
     <section class="special">
         <div class="container">
@@ -413,7 +394,6 @@
         </div>
     </section>
 
-</div>
 
 
             <footer>
@@ -421,7 +401,7 @@
                     <p>&copy; Company 2012</p>
                 </div>
             </footer>
-            
+        </div>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -432,6 +412,7 @@
         <script src="http://localhost:4000/js/main.js"></script>
 
         <!-- Touch script -->
+        <script src="http://localhost:4000/js/vendor/hammer.min.js"></script>
         <script src="http://localhost:4000/js/vendor/jquery.hammer.js"></script>
 
                 <!-- Slider script & styles -->
@@ -442,6 +423,8 @@
           $(window).load(function() {
             $('.flexslider').flexslider({
               animation: "slide",
+              slideshow: false,
+              controlNav: false,
             });
           });
         </script>

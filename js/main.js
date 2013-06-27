@@ -76,31 +76,35 @@ $(document).ready(function() {
 });
 
 
+
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
-  $("#slide-nav, .body-overlay, #page-container").toggleClass("visible");
+  $("#nav-btn, #slide-nav, .body-overlay, .page-container").toggleClass("visible");
 });
 
 $("#nav-btn-close").click(function (e) {
    e.preventDefault();
-  $("#slide-nav, .body-overlay, #page-container").toggleClass("visible");
+  $("#nav-btn, #slide-nav, .body-overlay, .page-container").toggleClass("visible");
 });
 
 // add touch support for sliding nav
 $(document).ready(function() {
-  $('#page-container').hammer().on("swiperight", function(event) {
-          $('#slide-nav, .body-overlay, #page-container').addClass('visible');  
+  $('.page-container').hammer().on("swiperight", function(e) {
+     e.preventDefault();
+          $('#nav-btn, #slide-nav, .body-overlay, .page-container').addClass('visible');  
       });
-  $('#page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(event) {
-          $('#slide-nav, .body-overlay, #page-container').removeClass('visible');  
+  $('.page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(e) {
+     e.preventDefault();
+          $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible');  
       });
 
 });
 
+
 // On slide-nav links click close side menu
 $(".menu-link").click(function () {
-  $('#slide-nav, .body-overlay, #page-container').removeClass('visible'); 
+  $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible'); 
 });
 
 // Fomulier mailchimp animatie
@@ -138,6 +142,22 @@ $(".blokje-close").click(function (e) {
    e.preventDefault();
   $(".block-overlay").toggleClass("open");
 });
+
+//Responsive showcase nav
+$("#slide-desktop-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(1);
+});
+
+$("#slide-laptop-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(2);
+});
+
+$("#slide-mobile-btn").click(function (e) {
+   e.preventDefault();
+  $('.flexslider').flexslider(3);
+  });
 
 
 $("#slide-desktop-btn").click(function (e) {
