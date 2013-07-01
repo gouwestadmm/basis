@@ -9,7 +9,7 @@
         <title>Homepage | Of this awesome website</title>
         <meta name="description" content="Wow this really is an awesome website">
         <meta name="keywords" content="Awesome, website, keywords">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <!--
    
@@ -39,8 +39,11 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
         <script src="http://localhost:4000/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <!-- Chart.js ?? moeten deze in de head sectie?? -->
         <script src="http://localhost:4000/js/vendor/charts/Chart.js"></script>
         <script src="http://localhost:4000/js/vendor/charts/effects.js"></script>
+      
     </head>
 
     <body id="">
@@ -67,32 +70,28 @@
 		</a>
 	</div>
 	<div class="nav-side" id="slide-nav">
-		<a href="#" class="nav-btn-side" id="nav-btn-close">
-			<i class="icon-remove"></i>
-		</a>
 		<h3>Gouwestad sites</h3>
 		<ul class="nav nav-pills nav-stacked">
-		    <li><a href="#"><i class="icon-thumbs-up"></i>  Een nieuw soort <strong>website</strong></a></li>
-		    <li><a href="#"><i class="icon-compass"></i> Gericht op <strong>resultaat</strong></a></li>
-		    <li><a href="#"><i class="icon-pencil"></i> Handgemaakt <strong>design</strong></a></li>
-		    <li><a href="#"><i class="icon-bar-chart"></i> Meten is <strong>weten</strong></a></li>
-		    <li><a href="#"><i class="icon-eur"></i> Betaalbaar en <strong>snel</strong></a></li>
+		    <li><a href="#" class="menu-link"><i class="icon-thumbs-up"></i>  Een nieuw soort <strong>website</strong></a></li>
+		    <li><a href="#" class="menu-link"><i class="icon-compass"></i> Gericht op <strong>resultaat</strong></a></li>
+		    <li><a href="#" class="menu-link"><i class="icon-pencil"></i> Handgemaakt <strong>design</strong></a></li>
+		    <li><a href="#" class="menu-link"><i class="icon-bar-chart"></i> Meten is <strong>weten</strong></a></li>
+		    <li><a href="#" class="menu-link"><i class="icon-eur"></i> Betaalbaar en <strong>snel</strong></a></li>
 		</ul>
 	</div>
-
+    <div class="page-container">
 
     <header>
         <div class="container">
             <div class="jumbotron text-center">
-                <h1>Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <h1>Een website die werkt</h1>
+                <p>Vertel je verhaal met een mooie en resultaatgerichte website.</p>
                 <p><a href="#special" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
             </div>
         </div>
     </header>
 
-
-    <!--<section class="introduction">
+    <section class="introduction">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -122,7 +121,7 @@
                 </div>
 
                 <!-- Block overlays -->
-                <!--<div class="block-overlay">
+                <div class="block-overlay">
                     <div class="row">
                         <div class="col-lg-4">
                             <img src="http://localhost:4000/img/mobile-analytics.png">
@@ -135,7 +134,7 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <section class="responsive-showcase" id="special">
         <div class="overlay">
@@ -521,7 +520,7 @@
                     <p>&copy; Company 2012</p>
                 </div>
             </footer>
-            
+        </div>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -530,6 +529,10 @@
         <script src="http://localhost:4000/js/vendor/bootstrap.min.js"></script>
 
         <script src="http://localhost:4000/js/main.js"></script>
+
+        <!-- Touch script -->
+        <script src="http://localhost:4000/js/vendor/hammer.min.js"></script>
+        <script src="http://localhost:4000/js/vendor/jquery.hammer.js"></script>
 
                 <!-- Slider script & styles -->
          <script src="http://localhost:4000/js/vendor/jquery.flexslider-min.js"></script>

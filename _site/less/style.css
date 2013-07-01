@@ -5547,6 +5547,19 @@ h6 {
   font-size: 1.2em;
   color: #fff;
   background: #345065;
+  -webkit-transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: 0.3s;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: 0.3s;
+       -o-transition: all 0.3s ease;
+          transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.visible {
+  left: 16.666667em;
 }
 
 .nav-side {
@@ -5618,6 +5631,26 @@ h6 {
 
 .nav-side .nav-pills > li > a {
   border-radius: 0;
+}
+
+.page-container {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: 0.3s;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: 0.3s;
+       -o-transition: all 0.3s ease;
+          transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.page-container.visible {
+  left: 20em;
 }
 
 .body-overlay {
@@ -5950,6 +5983,11 @@ h6 {
   line-height: 1.5em;
 }
 
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 .jumbotron {
   background: none;
 }
@@ -6080,6 +6118,10 @@ h6 {
 
 .quote small {
   font-size: 0,5em;
+}
+
+.flexslider {
+  overflow: hidden;
 }
 
 .portfolio figure {

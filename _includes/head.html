@@ -9,7 +9,7 @@
         <title>{{ page.title }} | {{ page.tagline }}</title>
         {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
         <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <!--
    
@@ -39,8 +39,11 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
         <script src="{{ site.url }}/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <!-- Chart.js ?? moeten deze in de head sectie?? -->
         <script src="{{ site.url }}/js/vendor/charts/Chart.js"></script>
         <script src="{{ site.url }}/js/vendor/charts/effects.js"></script>
+      
     </head>
 
     <body id="{{ page.page-id }}">
