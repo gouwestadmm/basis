@@ -80,17 +80,32 @@ $(document).ready(function() {
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
-  $("#slide-nav").toggleClass("visible");
-  $(".body-overlay").toggleClass("visible");
+  $("#nav-btn, #slide-nav, .body-overlay, .page-container").toggleClass("visible");
 });
 
 $("#nav-btn-close").click(function (e) {
    e.preventDefault();
-  $("#slide-nav").toggleClass("visible");
-  $(".body-overlay").toggleClass("visible");
+  $("#nav-btn, #slide-nav, .body-overlay, .page-container").toggleClass("visible");
+});
+
+// add touch support for sliding nav
+$(document).ready(function() {
+  $('.page-container').hammer().on("swiperight", function(e) {
+     e.preventDefault();
+          $('#nav-btn, #slide-nav, .body-overlay, .page-container').addClass('visible');  
+      });
+  $('.page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(e) {
+     e.preventDefault();
+          $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible');  
+      });
+
 });
 
 
+// On slide-nav links click close side menu
+$(".menu-link").click(function () {
+  $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible'); 
+});
 
 // Fomulier mailchimp animatie
 $("#btn-mc").click(function (e) {

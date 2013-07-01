@@ -5445,6 +5445,14 @@ h6 {
   font-size: 1.2em;
   color: #fff;
   background: #428bca;
+  -webkit-transition: 0.3s;
+     -moz-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.nav-btn.visible {
+  left: 16.666667em;
 }
 
 .nav-side {
@@ -5516,6 +5524,21 @@ h6 {
 
 .nav-side .nav-pills > li > a {
   border-radius: 0;
+}
+
+.page-container {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s;
+     -moz-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.page-container.visible {
+  left: 20em;
 }
 
 .body-overlay {
@@ -5927,6 +5950,10 @@ h6 {
 
 .vertical-center {
   vertical-align: middle;
+}
+
+.flexslider {
+  overflow: hidden;
 }
 
 .portfolio figure {
