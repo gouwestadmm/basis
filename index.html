@@ -61,6 +61,8 @@ keywords:       Awesome, website, keywords
     </section>
 
     <section class="responsive-showcase" id="special">
+        <div class="overlay">
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -84,7 +86,7 @@ keywords:       Awesome, website, keywords
                         <div class="col-5 vert-middle">
                             <h6>Responsive is standaard</h6>
                             <p>Alle websites worden responsive opgeleverd, met enkele toevoegingen waardoor het nog beter werkt.</p>
-                            <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                            <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup btn-animated"><i class="icon-desktop"></i> <span>Test het</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -143,40 +145,82 @@ keywords:       Awesome, website, keywords
     </div>
     </div>
 
-    <section class="special">
+    <section>
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="page-header">
-                        <h1>Meten is <strong>weten</strong></h1>
-                        <p class="intro">Standaard worden alle website uitgerust met Google Analytics. Om onze klanten op weg te helpen meten wij gedurende de eerste 30-dagen het bezoekersgedrag en rapporteren eventuele verbeterpunten en handige toevoegingen in de content.</p>
+            <div class="row functies">
+                <div class="col-4">
+                    <i class="icon-bar-chart icon-super"></i>
+                    <h4>Meten is <strong>weten</strong></h4>
+                    <p>Standaard worden alle website uitgerust met Google Analytics. Om onze klanten op weg te helpen meten wij gedurende de eerste 30-dagen het bezoekersgedrag en rapporteren verbeterpunten.</p>
+                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#statistieken">Lees verder <i class="icon-collapse-alt"></i></button>
+                </div>
+                <div class="col-4">
+                    <i class="icon-mail icon-super"></i>
+                    <h4>Nieuwsbrieven</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#nieuwsbrieven">Lees verder <i class="icon-collapse-alt"></i></button>
+                </div>
+                <div class="col-4">
+                    <i class="icon-thumbs-up-alt icon-super"></i>
+                    <h4>Krijg meer <strong>volgers</strong></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#socialdashboard">Lees verder <i class="icon-collapse-alt"></i></button>
+                </div> 
+            </div>
+        </div>
+
+        <div id="statistieken" class="collapse out">
+            <div class="uitvouwen">
+                <div class="row analytics">
+                    <div class="col-12 col-sm-4">
+                        <img src="img/desktop.png">
+                        <h3>Sociale bronnen</h3>
+                        <p>Het inzetten van sociale bronnen is inmiddels 'gewoon', maar heeft dit resultaat op de website? </p>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <img src="img/desktop.png">
+                        <h3>In-page analyseren</h3>
+                        <p>I.c.m. de A/B-tests een handige tool om te kijken wat het klikgedrag van het bezoek op de website is. </p>
+                   </div>
+                    <div class="col-12 col-sm-4">
+                        <img src="img/desktop.png">
+                        <h3>Mobiele beleving</h3>
+                        <p>Er zijn huishoudens zonder computer met alleen maar mobiele devices. Hoe gaat jullie website hiermee om?</p>
                     </div>
                 </div>
             </div>
-            <div class="row analytics">
-                <div class="col-12 col-sm-4">
-                    <img src="img/social-analytics.png">
-                    <h3>Sociale bronnen</h3>
-                    <p>Het inzetten van sociale bronnen is inmiddels 'gewoon', maar heeft dit resultaat op de website? </p>
-                    <p><a class="btn" href="#">Lees verder &raquo;</a></p>
+        </div>
+
+        <div id="nieuwsbrieven" class="collapse out">
+            <div class="uitvouwen">
+                <div class="container">
+                    <div class="row analtyics">
+                        <div class="col-12 text-center">
+                            <h3>Nieuwsbriefmodule</h3>
+                            <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-sm-4">
-                    <img src="img/inpage-analytics.png">
-                    <h3>In-page analyseren</h3>
-                    <p>I.c.m. de A/B-tests een handige tool om te kijken wat het klikgedrag van het bezoek op de website is. </p>
-                    <p><a class="btn" href="#">Lees verder &raquo;</a></p>
-               </div>
-                <div class="col-12 col-sm-4">
-                    <img src="img/mobile-analytics.png">
-                    <h3>Mobiele beleving</h3>
-                    <p>Er zijn huishoudens zonder computer met alleen maar mobiele devices. Hoe gaat jullie website hiermee om?</p>
-                    <p><a class="btn" href="#">Lees verder &raquo;</a></p>
+            </div>
+        </div>
+
+        <div id="socialdashboard" class="collapse out">
+            <div class="uitvouwen">
+                <div class="container">
+                    <div class="row analtyics">
+                        <div class="col-12 text-center">
+                            <h3>Laat klanten betalen met een <strong>tweet of een post.</strong></h3>
+
+                            <p class="intro">Soms is media exposure meer waard dan direct cold hard cash. Laat klanten en geinteresseerden betalen voor kleine dingen met een tweet, een facebookpost of een post op LinkedIn. Een sociaal betaalsysteem waarbij de klant betaald met de waarde van zijn of haar sociale netwerk.</p>
+                            <a href="https://www.paywithatweet.com/pay/?id=ac30362e182b7b22a983dcd1fa56fd57"><button type="button" class="btn btn-large">Betalen</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-     <section class="signup">
+     <section class="signup special">
         <div class="container">
             <div class="row">
                 <div class="col12 text-center">
@@ -230,22 +274,78 @@ keywords:       Awesome, website, keywords
         </div>
     </section>
 
-    <section class="showcase">
-        <div class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="http://zuidplashof.nl/images/slider2.jpg" />
-            </li>
-            <li>
-              <img src="http://gouwestadmm.github.com/Zuidplashof/images/headerimage.jpg" />
-            </li>
-            <li>
-              <img src="http://zuidplashof.nl/images/slider3.jpg" />
-            </li>
-          </ul>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center quote">
+                      <h2>The trick isn't adding stuff. It's taking away.</h2>
+                      <small><i class="icon-comment-alt"></i> Mark Zuckerberg <a href="www.facebook.com">Facebook CEO</a></small>
+                </div>
+            </div>
         </div>
     </section>
+<!--
+    <section>
+        <div class="container">
+            <div class="col-4">
+                <canvas id="stats1" height="400" width="400"></canvas>
+                <script>
+                    var doughnutData = [
+                            {
+                                value: 30,
+                                color:"#F7464A"
+                            },
+                            {
+                                value : 50,
+                                color : "#46BFBD"
+                            },
+                            {
+                                value : 100,
+                                color : "#FDB45C"
+                            },
+                            {
+                                value : 40,
+                                color : "#949FB1"
+                            },
+                            {
+                                value : 120,
+                                color : "#4D5360"
+                            }
+                        
+                        ];
 
+                    var myDoughnut = new Chart(document.getElementById("stats1").getContext("2d")).Doughnut(doughnutData); 
+                </script>
+            </div>
+            <div class="col-4">
+                <div class="hidden" id="lineChart">
+                <canvas id="lineChartCanvas" height="400" width="400"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <canvas id="stats3" height="400" width="400"></canvas>
+                <script>
+                    var pieData = [
+                                {
+                                    value: 30,
+                                    color:"#F38630"
+                                },
+                                {
+                                    value : 50,
+                                    color : "#E0E4CC"
+                                },
+                                {
+                                    value : 100,
+                                    color : "#69D2E7"
+                                }
+                            
+                            ];
+
+                    var myPie = new Chart(document.getElementById("stats3").getContext("2d")).Pie(pieData); 
+                </script>
+            </div>
+        </div>
+    </section>
 
     <section class="portfolio">
         <div class="container">
@@ -319,5 +419,21 @@ keywords:       Awesome, website, keywords
                 </div>
             </div>
         </div>
+    </section>-->
+    <section>
+        <div class="container">
+                <div class="col-12 text-center">
+                    <h1>Socialize with us</h1>
+                    <ul class="btn-social">
+                        <li><a href="www.facebook.com"><i class="icon-facebook"></i></a></li>
+                        <li><a href="www.facebook.com"><i class="icon-twitter"></i></a></li>
+                        <li><a href="www.facebook.com"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="www.facebook.com"><i class="icon-envelope-alt"></i></a></li>
+                    </ul>
+                </div>
+        </div>
     </section>
+
+
+
 

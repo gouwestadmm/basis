@@ -160,8 +160,3 @@ $("#slide-mobile-btn").click(function (e) {
   });
 
 
-$("#slide-desktop-btn").click(function (e) {
-   e.preventDefault();
-  $('.flexslider').flexslider(0);
-});
-
