@@ -15,18 +15,120 @@
 
 
 //Site specific story styles
+
+
+
 body{
 	overflow: scroll;
 	overflow-x: hidden;
+	background: #fefefe;
 }
 
 .jumbotron{
 	background: none;
-	h1 {
-		color: @brand-tertiary;
+}
+
+header{
+	background: url("../img/header.jpg") no-repeat center center fixed;
+	.background-size(cover);
+	height: 100%;
+	color: #fff;
+	position: relative;
+	.container{
+		position: relative;
+	}
+	h1{
+		color: #fff;
+		small{
+			color: #fff;
+		}
+	}
+	h6{
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.btn{
+		position: relative;
+		font-size: 0.8em;
+		padding: 0.5em 0.8em;
+		margin-top: 2em;
+		border: none;
+		border-radius: 0;
+		padding-left: 4em;
+		&:before{
+			    background: #fff;
+			    content: "\F0A9";
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    height: 100%;
+			    width: 2em;
+			    font-family: "FontAwesome";
+			    font-size: 1.5em;
+			    color: @brand-primary;
+		}
 	}
 }
 
+.intro{
+	border-top: 1px solid #fff;
+}
+
+//Focus section
+.focus{
+	background: @brand-primary;
+	//blurred text
+	.blur{
+		font-size: 10em;
+		color: transparent;
+		text-shadow: 0 0 0.2em #fff;
+		
+	}
+	h2, small, a{
+		color: #fff;
+	}
+
+}
+
+//focus-content section
+.focus-content{
+
+}
+
+.focus-blocks{
+	background: url("../img/header.jpg") no-repeat center center fixed;
+	.background-size(cover);
+	.blocks{
+		position: relative;
+		.well{
+		background: rgba(255,255,255,0.75);
+		color: rgba(0,0,0,0.5);
+		border: 1px solid rgba(255,255,255,0.3);
+		.transition(0.3s);
+			.icon-super{
+				color: rgba(0,0,0,0.5);
+			}
+			&:hover{
+				background: #fff;	
+				color: @brand-primary;
+				.scale(1.05);
+				.icon-super{
+					color: @brand-primary;
+				}
+			}
+			&.open{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				display: block;
+				z-index: 2;
+			}
+		}
+	}
+}
 
 // Introductie sectie styles
 .introduction{
@@ -37,7 +139,7 @@ body{
 		box-shadow: 0 0 5px rgba(0,0,0,0.4);
 		position: relative;
 		overflow: hidden;
-		perspective: 1000px;
+		perspective: 1000px; 
     	perspective-origin: 50% 25%;
 		& .col-lg-4{
 			padding: 3em 0;
@@ -94,6 +196,7 @@ body{
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
+	overflow: hidden;
 }
 
 .bottom {
