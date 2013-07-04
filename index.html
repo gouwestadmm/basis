@@ -6,16 +6,25 @@ description:    Wow this really is an awesome website
 keywords:       Awesome, website, keywords
 ---
     <header>
-        <div class="container">
-            <div class="jumbotron text-center">
-                <h1>Een website die werkt</h1>
-                <p>Vertel je verhaal met een mooie en resultaatgerichte website.</p>
-                <p><a href="#special" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <div class="vertical-align">
+            <div class="container">
+                <div class="jumbotron text-center">
+                    <h1>Een website die werkt</h1>
+                    <p>Vertel je verhaal met een mooie en resultaatgerichte website.</p>
+                    <p><a href="#introduction" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="introduction">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="{{ site.url }}/js/vendor/jquery.flexverticalcenter.js"></script>
+
+        <script>
+          $('.vertical-align').flexVerticalCenter();
+        </script>
+
+    <section class="introduction" id="introduction">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -60,6 +69,35 @@ keywords:       Awesome, website, keywords
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Wat krijg je?</h2>
+                </div>
+                <div class="col-12 video">
+                    <iframe src="http://player.vimeo.com/video/11673745?portrait=0&amp;color=ff9933" width="500" height="250" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+                <div class="col-3 col-offset-2">
+                    <p><i class="icon-check-sign btn-green"></i> Responsive webdesign</p>
+                    <p><i class="icon-check-sign btn-green"></i> Responsive videoplayer</p>
+                    <p><i class="icon-check-sign btn-green"></i> Google Analytics</p>       
+                </div>
+                <div class="col-3">
+                    <p><i class="icon-check-sign btn-green"></i> Pay with a tweet</p>
+                    <p><i class="icon-check-sign btn-green"></i> Mailing-module</p> 
+                    <p><i class="icon-check-sign btn-green"></i> HTML5 & CSS3</p>      
+                </div>
+                <div class="col-3">
+                    <p><i class="icon-check-sign btn-green"></i> Custom design</p>
+                    <p><i class="icon-check-sign btn-green"></i> SEO geoptimaliseerd</p>
+                    <p><i class="icon-check-sign btn-green"></i> SEA ready</p>       
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="responsive-showcase" id="special">
         <div class="overlay">
         </div>
@@ -75,18 +113,17 @@ keywords:       Awesome, website, keywords
           <ul class="slides">
             <li class="showcase-devices">
                 <div class="container"> 
-                    <div class="row vert-box">
+                    <div class="row">
                         <div class="col-7 responsive-design"> 
-                            <img class="desktop" src="img/responsive/desktop.png">
-                            <img class="laptop" src="img/responsive/laptop.png">
-                            <img class="tablet" src="img/responsive/tablet.png">
-                            <img class="tablet-mini" src="img/responsive/tablet-mini.png">
-                            <img class="phone" src="img/responsive/phone.png">
+                            <img class="desktop" src="img/desktop.png">
+                            <img class="laptop" src="img/laptop.png">
+                            <img class="tablet" src="img/tablet.png">
+                            <img class="phone" src="img/phone.png">
                         </div>
-                        <div class="col-5 vert-middle">
-                            <h6>Responsive is standaard</h6>
+                        <div class="col-5">
+                            <h6><strong>Responsive is standaard</strong></h6>
                             <p>Alle websites worden responsive opgeleverd, met enkele toevoegingen waardoor het nog beter werkt.</p>
-                            <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup btn-animated"><i class="icon-desktop"></i> <span>Test het</span></button></a>
+                            <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-blank btn-animated"><i class="icon-check"></i> <span>Test het</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -94,38 +131,37 @@ keywords:       Awesome, website, keywords
             <li class="showcase-dekstop">
                 <div class="container"> 
                     <div class="col-7 responsive-design"> 
-                        <img src="img/desktop.png">
+                        <img src="img/responsive/desktop.png">
                     </div>
                     <div class="col-5">
-                        <h6>Desktop</h6>
+                        <h6><strong>Desktop</strong></h6>
                         <p>Revolutionair. Van het kleinste beeldscherm tot de allergrootste, altijd 'op maat'. </p>
-                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-blank" >Test het</button></a>
                     </div>
                 </div>
             </li>
             <li class="showcase-laptop">
                 <div class="container"> 
                     <div class="col-7 responsive-design"> 
-                        <img src="img/laptop.png">
+                        <img src="img/responsive/laptop.png">
                     </div>
                     <div class="col-5">
-                        <h6>Laptop</h6>
+                        <h6><strong>Laptop</strong></h6>
                         <p>Ook laptops varieren tegenwoordig van zakformaat 11 inch tot 19 inch. </p>
-                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-blank" >Test het</button></a>
                     </div>
                 </div>
             </li>
             <li class="showcase-mobile">
                 <div class="container"> 
                     <div class="col-7 responsive-design"> 
-                        <img src="img/tablet.png">
-                        <img src="img/tablet-mini.png">
-                        <img src="img/phone.png">
+                        <img src="img/responsive/tablet.png">
+                        <img src="img/responsive/phone.png">
                     </div>
                     <div class="col-5">
-                        <h6>Mobiel</h6>
+                        <h6><strong>Mobiel</strong></h6>
                         <p>Naast de 'gewone' tablets zijn er ook 7 inch tablets, en een batterij aan verschillende telefoonschermen</p>
-                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-signup" >Test het</button></a>
+                        <a href="http://placeit.breezi.com/"><button class="btn btn-large btn-blank" >Test het</button></a>
                     </div>
                 </div>
             </li>
@@ -134,58 +170,63 @@ keywords:       Awesome, website, keywords
     </section>
     <div class="row">
         <div class="col-12 nav-showcase">
-        <div class="nav-showcase">
-            <ul class="nav nav-pills">
-                <li><a>Kies een device: </a></li>
-                <li><a href="#" id="slide-desktop-btn">Desktop <i class="icon-desktop"></i></a></li>
-                <li><a href="#" id="slide-laptop-btn">Laptop <i class="icon-laptop"></i></a></li>
-                <li><a href="#" id="slide-mobile-btn">Mobiel <i class="icon-tablet"></i> <i class="icon-mobile-phone"></i></a></li>
-            </ul>
+            <div class="nav-showcase">
+                <ul class="nav nav-pills">
+                    <li><p>Kies een device: </p></li>
+                    <li><a href="#" id="slide-desktop-btn">Desktop <i class="icon-desktop"></i></a></li>
+                    <li><a href="#" id="slide-laptop-btn">Laptop <i class="icon-laptop"></i></a></li>
+                    <li><a href="#" id="slide-mobile-btn">Mobiel <i class="icon-tablet"></i> <i class="icon-mobile-phone"></i></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     </div>
 
     <section>
         <div class="container">
             <div class="row functies">
                 <div class="col-4">
-                    <i class="icon-bar-chart icon-super"></i>
-                    <h4>Meten is <strong>weten</strong></h4>
+                    <h4><i class="icon-bar-chart"></i> Meten is <strong>weten</strong></h4>
                     <p>Standaard worden alle website uitgerust met Google Analytics. Om onze klanten op weg te helpen meten wij gedurende de eerste 30-dagen het bezoekersgedrag en rapporteren verbeterpunten.</p>
-                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#statistieken">Lees verder <i class="icon-collapse-alt"></i></button>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#statistieken">Lees verder <i class="icon-collapse-alt"></i></button>
                 </div>
                 <div class="col-4">
-                    <i class="icon-mail icon-super"></i>
-                    <h4>Nieuwsbrieven</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
-                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#nieuwsbrieven">Lees verder <i class="icon-collapse-alt"></i></button>
+                    <h4><i class="icon-mail"></i> Mailings <strong>versturen</strong></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. </p>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#nieuwsbrieven">Lees verder <i class="icon-collapse-alt"></i></button>
                 </div>
                 <div class="col-4">
-                    <i class="icon-thumbs-up-alt icon-super"></i>
-                    <h4>Krijg meer <strong>volgers</strong></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
-                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#socialdashboard">Lees verder <i class="icon-collapse-alt"></i></button>
+                    <h4><i class="icon-thumbs-up-alt"></i> Krijg meer <strong>volgers</strong></h4>
+                    <p>Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#socialdashboard">Lees verder <i class="icon-collapse-alt"></i></button>
                 </div> 
             </div>
         </div>
 
         <div id="statistieken" class="collapse out">
             <div class="uitvouwen">
-                <div class="row analytics">
-                    <div class="col-12 col-sm-4">
-                        <img src="img/desktop.png">
-                        <h3>Sociale bronnen</h3>
-                        <p>Het inzetten van sociale bronnen is inmiddels 'gewoon', maar heeft dit resultaat op de website? </p>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <img src="img/desktop.png">
-                        <h3>In-page analyseren</h3>
-                        <p>I.c.m. de A/B-tests een handige tool om te kijken wat het klikgedrag van het bezoek op de website is. </p>
-                   </div>
-                    <div class="col-12 col-sm-4">
-                        <img src="img/desktop.png">
-                        <h3>Mobiele beleving</h3>
-                        <p>Er zijn huishoudens zonder computer met alleen maar mobiele devices. Hoe gaat jullie website hiermee om?</p>
+                <div class="container">
+                    <div class="row meten-is-weten">
+                        <div class="col-12">
+                            <h1>Meten is weten</h1>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <h6>Sociale bronnen</h6>
+                            <p>Het inzetten van sociale bronnen is inmiddels 'gewoon', maar heeft dit resultaat op de website?</p>
+                            <p class="text-center"><i class="icon-thumbs-up-alt icon-super"></i></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <h6>In-page analyseren</h6>
+                            <p>I.c.m. de A/B-tests een handige tool om te kijken wat het klikgedrag van het bezoek op de website is. </p>
+                            <p class="text-center"><i class="icon-desktop icon-super"></i></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                       </div>
+                        <div class="col-12 col-sm-4">
+                            <h6>Mobiele beleving</h6>
+                            <p>Er zijn huishoudens zonder computer met alleen maar mobiele devices. Hoe gaat jullie website hiermee om?</p>
+                            <p class="text-center"><i class="icon-tablet icon-super"></i></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,7 +236,7 @@ keywords:       Awesome, website, keywords
             <div class="uitvouwen">
                 <div class="container">
                     <div class="row analtyics">
-                        <div class="col-12 text-center">
+                        <div class="col-12">
                             <h3>Nieuwsbriefmodule</h3>
                             <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
                         </div>
@@ -209,6 +250,7 @@ keywords:       Awesome, website, keywords
                 <div class="container">
                     <div class="row analtyics">
                         <div class="col-12 text-center">
+                            <i class="icon-twitter icon-huge"></i>
                             <h3>Laat klanten betalen met een <strong>tweet of een post.</strong></h3>
 
                             <p class="intro">Soms is media exposure meer waard dan direct cold hard cash. Laat klanten en geinteresseerden betalen voor kleine dingen met een tweet, een facebookpost of een post op LinkedIn. Een sociaal betaalsysteem waarbij de klant betaald met de waarde van zijn of haar sociale netwerk.</p>
@@ -226,48 +268,51 @@ keywords:       Awesome, website, keywords
                 <div class="col12 text-center">
                     <i class="icon-inbox icon-super"></i>
                     <h2>Keep me <strong>posted</strong></h2>
-                    <p class="intro">Op de hoogte blijven van updates en ontwikkelingen? Schrijf u dan nu in voor onze nieuwsbrief</p>
+                    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt quis, viverra sed mauris. Nam at risus egestas, feugiat metus at, laoreet elit. Integer</p>
                     <button class="btn btn-large btn-animated" id="btn-mc"><i class="icon-mail"></i> <span>Ja ik wil up to date worden gehouden</span></button>
                 </div>
             </div>
             <div class="mc-page mc-page-2">
-                <div class="row">
-                    <div class="col-12">
-                        <form class="form-horizontal" action="http://gouwestad.us1.list-manage.com/subscribe/post" method="post">
-                            <input type="hidden" name="u" value="12356aa89b280225cc4c74fbb">
-                            <input type="hidden" name="id" value="02695a6847">
-                            <div class"row">
-                                <div class="col-12">
-                                    <a href="#" class="nav-btn-side" id="btn-mc-close">
-                                    <i class="icon-remove-sign"></i>
-                                    </a>
-                                    <h2>Write me <strong>someday</strong></h2>
+                <div class="overlay">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form-horizontal" action="http://gouwestad.us1.list-manage.com/subscribe/post" method="post">
+                                <input type="hidden" name="u" value="12356aa89b280225cc4c74fbb">
+                                <input type="hidden" name="id" value="02695a6847">
+                                <div class"row">
+                                    <div class="col-12">
+                                        <a href="#" class="nav-btn-side" id="btn-mc-close">
+                                        <i class="icon-remove-sign"></i>
+                                        </a>
+                                        <h2>Write me <strong>someday</strong></h2>
+                                        <p class="intro text-center">Nullam ultrices dolor et lectus auctor accumsan. Curabitur purus nisl, vehicula vel tincidunt</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <label for="MERG0" class="col-sm-3 control-label">Email</label>
-                                <div class="col-sm-9">
-                                    <input type="email" id="MERGE0" name="MERGE0" class="input-75" placeholder="Email">
+                                <div class="row">
+                                    <label for="MERG0" class="col-sm-3 control-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" id="MERGE0" name="MERGE0" class="input-75" placeholder="Email">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <label for="MERGE1" class="col-sm-3 control-label">Voornaam</label>
-                                <div class="col-sm-9">
-                                    <input type="text" id="MERGE1" name="MERGE1" class="input-75" placeholder="Voornaam">
+                                <div class="row">
+                                    <label for="MERGE1" class="col-sm-3 control-label">Voornaam</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="MERGE1" name="MERGE1" class="input-75" placeholder="Voornaam">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <label for="MERGE2" class="col-sm-3 control-label">Achternaam</label>
-                                <div class="col-sm-9">
-                                    <input type="text" id="MERGE1" name="MERGE2" class="input-75" placeholder="Achternaam">
+                                <div class="row">
+                                    <label for="MERGE2" class="col-sm-3 control-label">Achternaam</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="MERGE1" name="MERGE2" class="input-75" placeholder="Achternaam">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                  <button type="submit" class="btn btn-large btn-signup" >Schrijf me in</button>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                      <button type="submit" class="btn btn-large btn-signup" >Schrijf me in</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -423,7 +468,7 @@ keywords:       Awesome, website, keywords
     <section>
         <div class="container">
                 <div class="col-12 text-center">
-                    <h1>Socialize with us</h1>
+                    <h2>Socialize with us</h2>
                     <ul class="btn-social">
                         <li><a href="www.facebook.com"><i class="icon-facebook"></i></a></li>
                         <li><a href="www.facebook.com"><i class="icon-twitter"></i></a></li>
@@ -433,6 +478,73 @@ keywords:       Awesome, website, keywords
                 </div>
         </div>
     </section>
+
+    <script type="text/javascript">
+    (function ( window, document, undefined ) {
+
+    /*
+    * Grab all iframes on the page or return
+    */
+    var iframes = document.getElementsByTagName( 'iframe' );
+
+    /*
+    * Loop through the iframes array
+    */
+    for ( var i = 0; i < iframes.length; i++ ) {
+
+        var iframe = iframes[i],
+
+        /*
+        * RegExp, extend this if you need more players
+        */
+        players = /www.youtube.com|player.vimeo.com/;
+
+        /*
+        * If the RegExp pattern exists within the current iframe
+        */
+        if ( iframe.src.search( players ) > 0 ) {
+
+            /*
+            * Calculate the video ratio based on the iframe's w/h dimensions
+            */
+            var videoRatio        = ( iframe.height / iframe.width ) * 100;
+            
+            /*
+            * Replace the iframe's dimensions and position
+            * the iframe absolute, this is the trick to emulate
+            * the video ratio
+            */
+            iframe.style.position = 'absolute';
+            iframe.style.top      = '0';
+            iframe.style.left     = '0';
+            iframe.width          = '100%';
+            iframe.height         = '100%';
+            
+            /*
+            * Wrap the iframe in a new <div> which uses a
+            * dynamically fetched padding-top property based
+            * on the video's w/h dimensions
+            */
+            var wrap              = document.createElement( 'div' );
+            wrap.className        = 'fluid-vids';
+            wrap.style.width      = '100%';
+            wrap.style.position   = 'relative';
+            wrap.style.paddingTop = videoRatio + '%';
+            
+            /*
+            * Add the iframe inside our newly created <div>
+            */
+            var iframeParent      = iframe.parentNode;
+            iframeParent.insertBefore( wrap, iframe );
+            wrap.appendChild( iframe );
+
+        }
+
+    }
+
+})( window, document );
+
+</script>
 
 
 

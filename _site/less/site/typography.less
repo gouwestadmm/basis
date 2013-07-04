@@ -6,7 +6,7 @@ html{
 
 h1{
 	font-size: 4em;
-	color: @brand-secondary;
+	color: @brand-primary;
 }
 
 h2{
@@ -39,7 +39,7 @@ h6{
 
 .intro {
 	font-weight: 300;
-	font-size:1.5em;
+	font-size:1.2em;
 }
 
 .analytics {
@@ -50,8 +50,13 @@ h6{
 // Sytling icons
 
 .icon-super {
-    color: @brand-primary;
-    font-size: 5em;
+    color: @gray-dark;
+    font-size: 4em;
+}
+
+.icon-huge {
+	color: #fff;
+	font-size: 10em;
 }
 
 .icon-social {
@@ -68,18 +73,18 @@ h6{
 
 // Buttons
 
-.btn-signup{
+.btn-signup {
 	background-color: #fff;
 	color: @gray-dark;
 	&:hover{
 		background-color: @gray-lighter;
-		color: @brand-primary;
+		color: @gray-dark;
 	}
 }
 
 .btn-animated {
-	background: @brand-primary;
-	color: #fff;
+	background: #fff;
+	color: @brand-primary;
 	overflow: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
@@ -133,5 +138,21 @@ h6{
 			}
 		}
 	}
+}
+
+.btn-blank {
+	background: none;
+	color: #fff;
+	border-color: #fff;
+	border-width: 0.17em;
+	font-weight: 400;
+	&:hover{
+		background-color: #fff;
+		color: @gray-dark;
+	}
+}
+
+.btn-green {
+	color: @brand-success;
 }
 
