@@ -16,7 +16,9 @@
 
 //Site specific story styles
 
-
+html, body{
+	height: 100%;
+}
 
 body{
 	overflow: scroll;
@@ -28,12 +30,32 @@ body{
 	background: none;
 }
 
+
 header{
-	background: url("../img/header.jpg") no-repeat center center fixed;
+	background: url("../img/header.jpg") no-repeat fixed;
 	.background-size(cover);
+	width: 100%;
 	height: 100%;
 	color: #fff;
+	margin: 0 auto;
+	overflow: hidden;
 	position: relative;
+	z-index: 20;
+	.container{
+		height: 100%;
+	}
+	.jumbotron{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
 	.container{
 		position: relative;
 	}
@@ -73,14 +95,30 @@ header{
 
 .intro{
 	border-top: 1px solid #fff;
+	background: #fff;
+	padding: 8em 0;
+	z-index: 19;
 }
 
 //Focus section
 .focus{
 	background: @brand-primary;
-	//blurred text
+	height: 100%;
+	.jumbotron{
+		 position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 100%;
+		height: 100%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+		//blurred text
 	.blur{
-		font-size: 10em;
+		font-size: 14em;
 		color: transparent;
 		text-shadow: 0 0 0.2em #fff;
 		
@@ -131,13 +169,35 @@ header{
 }
 
 .design{
-	padding: 10em 0;
+	position: relative;
+	.overlay{
+		background: url("../img/header.jpg") no-repeat center bottom fixed;
+		.background-size(cover);
+	}
+	.story-width{
+		max-width: 60%;
+	}
 }
 
 svg{
 	height: auto;
     max-width: 100%;
     vertical-align: middle;
+}
+
+.analytics{
+		position: relative;
+		svg{
+		 height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	}
+}
+
+.macbook{
+	position: relative;
 }
 
 // Introductie sectie styles
