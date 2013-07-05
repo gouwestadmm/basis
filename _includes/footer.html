@@ -20,7 +20,16 @@
                 <!-- Slider script & styles -->
          <script src="{{ site.url }}/js/vendor/jquery.flexslider-min.js"></script>
          <script src="{{ site.url }}/js/vendor/waypoints.min.js"></script>
+
+         <script src="{{ site.url }}/js/vendor/skrollr.js"></script>
+         <script type="text/javascript">
+          skrollr.init({
+            forceHeight: false,
+          });
+          </script>
+        
         <!-- Start the slider up -->
+
         <script type="text/javascript" charset="utf-8">
           $(window).load(function() {
             $('.flexslider').flexslider({

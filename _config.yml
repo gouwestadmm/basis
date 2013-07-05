@@ -1,4 +1,5 @@
 permalink: 	pretty
 port: 4000
 baseurl:    /
-url: http://gouwestadmm.github.io/basis
+url: http://localhost:4000
+

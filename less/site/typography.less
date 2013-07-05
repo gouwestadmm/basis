@@ -6,6 +6,7 @@ html{
 
 h1{
 	font-size: 4em;
+	color: @brand-secondary;
 }
 
 h2{
@@ -27,6 +28,12 @@ h5{
 
 h6{
 	font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	small{
+		font-size: 0.65em;
+	}
 }
 
 .jumbotron{
@@ -51,6 +58,18 @@ h6{
 .icon-super {
     color: @brand-primary;
     font-size: 5em;
+}
+
+.icon-social {
+	font-size: 3em;
+    text-align: center;
+    .opacity(0.5);
+    &:hover {
+        text-decoration: none;
+        .scale(1.3);
+        .opacity(1);
+        transition: all 0.2s ease;
+    }
 }
 
 // Buttons
@@ -97,3 +116,28 @@ h6{
 .icon-mail:before {
 	content: "\f003";
 }
+
+.btn-social {
+	li {
+		display: inline;
+		padding: 1em;
+			a {
+			display: block;
+			height: 3em;
+			width: 3em;
+			line-height: 3em;
+			border-radius: 50%;
+			font-size:1.5em;
+			color:#fff;
+			text-align:center;
+			background: @brand-primary;
+			&:hover {
+				background: @gray-lighter;
+				color: @gray-dark;
+				.scale(1.3);
+				transition: all 0.2s ease;
+			}
+		}
+	}
+}
+

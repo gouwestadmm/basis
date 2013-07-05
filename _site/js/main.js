@@ -15,17 +15,6 @@
                            WHY ARE YOU LOOKING HERE? ;)
 */
 
-
-
-
-
-
-/****************************************************************************
-
-	SOME SMOOTH SCROLLING ANCHOR LINKS | COURTESY OF CSS-TRICKS
-
-*****************************************************************************/
-
 $(document).ready(function() {
   function filterPath(string) {
   return string
@@ -46,7 +35,7 @@ $(document).ready(function() {
         var targetOffset = $target.offset().top;
         $(this).click(function(event) {
           event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+          $(scrollElem).animate({scrollTop: targetOffset}, 1400, function() {
             location.hash = target;
           });
         });
@@ -77,6 +66,9 @@ $(document).ready(function() {
 
 
 
+
+
+
 // Show the sliding nav
 $("#nav-btn").click(function (e) {
    e.preventDefault();
@@ -89,17 +81,17 @@ $("#nav-btn-close").click(function (e) {
 });
 
 // add touch support for sliding nav
-$(document).ready(function() {
-  $('.page-container').hammer().on("swiperight", function(e) {
-     e.preventDefault();
-          $('#nav-btn, #slide-nav, .body-overlay, .page-container').addClass('visible');  
-      });
-  $('.page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(e) {
-     e.preventDefault();
-          $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible');  
-      });
-
-});
+//$(document).ready(function() {
+  //$('.page-container').hammer().on("swiperight", function(e) {
+   //  e.preventDefault();
+   //       $('#nav-btn, #slide-nav, .body-overlay, .page-container').addClass('visible');  
+   //   });
+  //$('.page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(e) {
+  //   e.preventDefault();
+ //         $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible');  
+   //   });
+//
+//});
 
 
 // On slide-nav links click close side menu
@@ -125,11 +117,6 @@ $(function() {
     $("header").toggleClass("animate");
 });
 
-$(document).ready(function() {
-  $('section').waypoint(function() {
-   $(this).toggleClass("animate");
-    }, { offset: '35%'});
-});
 
 
 // Introductie vakjes openen
@@ -159,9 +146,4 @@ $("#slide-mobile-btn").click(function (e) {
   $('.flexslider').flexslider(3);
   });
 
-
-$("#slide-desktop-btn").click(function (e) {
-   e.preventDefault();
-  $('.flexslider').flexslider(0);
-});
 
