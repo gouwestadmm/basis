@@ -6017,15 +6017,6 @@ h6 small {
   line-height: 1.5em;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-#skrollr-body {
-  height: 100%;
-}
-
 body {
   overflow: scroll;
   overflow-x: hidden;
