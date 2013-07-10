@@ -80,19 +80,6 @@ $("#nav-btn-close").click(function (e) {
   $("#nav-btn, #slide-nav, .body-overlay, .page-container").toggleClass("visible");
 });
 
-// add touch support for sliding nav
-//$(document).ready(function() {
-  //$('.page-container').hammer().on("swiperight", function(e) {
-   //  e.preventDefault();
-   //       $('#nav-btn, #slide-nav, .body-overlay, .page-container').addClass('visible');  
-   //   });
-  //$('.page-container, #slide-nav, .body-overlay').hammer().on("swipeleft", function(e) {
-  //   e.preventDefault();
- //         $('#nav-btn, #slide-nav, .body-overlay, .page-container').removeClass('visible');  
-   //   });
-//
-//});
-
 
 // On slide-nav links click close side menu
 $(".menu-link").click(function () {
