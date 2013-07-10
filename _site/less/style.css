@@ -6022,6 +6022,10 @@ body {
   height: 100%;
 }
 
+#skrollr-body {
+  height: 100%;
+}
+
 body {
   overflow: scroll;
   overflow-x: hidden;
