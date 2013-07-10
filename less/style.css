@@ -6219,12 +6219,15 @@ header .btn:before {
 .design {
   position: relative;
   z-index: 1;
-  height: 120%;
-  padding-top: 10em;
+  padding: 10em 0 3em;
 }
 
 .design .story-width {
   max-width: 60%;
+}
+
+.design svg {
+  position: relative;
 }
 
 .design h2 {
