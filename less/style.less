@@ -17,12 +17,9 @@
 //Site specific story styles
 
 html, body{
-	height: 100%;
+	height: 10000px;
 }
 
-#skrollr-body{
-	height: 100%;
-}
 
 body{
 	overflow: scroll;
@@ -48,11 +45,15 @@ body{
 	}
 }
 
+
 header{
-	height: 100%;
 	color: #fff;
-	position: relative;
-	z-index: 20;
+	z-index: 10;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
 	.container{
 		height: 100%;
 		position: relative;
@@ -97,9 +98,8 @@ header{
 .intro{
 	border-top: 1px solid #fff;
 	background: #fff;
-	height: 100%;
 	z-index: 19;
-
+	height: 100%;
 	.container{
 		position: relative;
 		height: 100%;
@@ -113,12 +113,8 @@ header{
 .focus{
 	background: @brand-primary;
 	height: 100%;
-
-	top:0;
-	left:0;
-	height:100%;
 	width: 100%;
-	z-index: 1;
+	z-index: 9;
 	.container{
 		position: relative;
 		height: 100%;
@@ -185,12 +181,14 @@ header{
 .design{
 	position: relative;
 	z-index: 1;
-	padding: 10em 0 3em;
+	padding: 10em 0;
+	height:auto;
 	.story-width{
 		max-width: 60%;
 	}
-	svg{
+	.move{
 		position: relative;
+		.clearfix();
 	}
 	h2{
 		color: #fff;
