@@ -1,11 +1,22 @@
 
 // Add some default paddings
 header{
-	padding: 8em 0;
 }
 
 section{
 	padding: 3em 0;
+	background: #fff;
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+
+.story-width{
+	max-width: 75%;
+	margin: 0 auto;
 }
 
 .overlay{
@@ -15,4 +26,16 @@ section{
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.4);
+}
+
+.vert-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
