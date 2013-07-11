@@ -6173,9 +6173,9 @@ header .btn:before {
 .focus-blocks {
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 12;
   width: 100%;
-  padding: 8em 0;
+  height: 100%;
   background: url("../img/header.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -6238,10 +6238,8 @@ header .btn:before {
 }
 
 .design {
-  position: relative;
-  z-index: 1;
-  height: auto;
-  padding: 10em 0;
+  z-index: 10;
+  height: 100%;
 }
 
 .design .story-width {
