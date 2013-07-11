@@ -75,17 +75,17 @@
 		<ul class="nav nav-pills nav-stacked">
 		    <li><a href="#" class="menu-link"><i class="icon-thumbs-up"></i>  Een nieuw soort <strong>website</strong></a></li>
 		    <li><a href="#" class="menu-link"><i class="icon-compass"></i> Gericht op <strong>resultaat</strong></a></li>
-		    <li><a href="#design" class="menu-link"><i class="icon-pencil"></i> Handgemaakt <strong>design</strong></a></li>
+		    <li><a href="#design" data-menu-top="6000" class="menu-link"><i class="icon-pencil"></i> Handgemaakt <strong>design</strong></a></li>
 		    <li><a href="#" class="menu-link"><i class="icon-bar-chart"></i> Meten is <strong>weten</strong></a></li>
 		    <li><a href="#" class="menu-link"><i class="icon-eur"></i> Betaalbaar en <strong>snel</strong></a></li>
 		</ul>
 	</div>
-    	<div class="page-container">
+    	<div class="page-container" id="skrollr-body">
 
     <header data-800="top:0%;" data-1400="top:-100%">
-        <video id="example_video_1" class="full-video"
+        <video id="example_video_1" class="full-video visible-lg"
           poster="http://video-js.zencoder.com/oceans-clip.png"
-          data-setup='{"autoplay": true, "controls": false, "loop": false}'>
+          data-setup='{"autoplay": true, "controls": false, "loop": true}'>
          <source src="http://gouwestad.com/lex/basis/_site/img/coast.mp4" type='video/mp4' />
          <source src="http://gouwestad.com/lex/basis/_site/img/coast.webm" type='video/webm' />
          <source src="http://gouwestad.com/lex/basis/_site/img/coast.ogv" type='video/ogg' />
@@ -95,14 +95,25 @@
                     <div class="jumbotron" data-400="opacity: 1; margin-top: 0%;" data-800="opacity: 0; margin-top: -20%;">
                         <h6>Vertel je verhaal</h6>
                         <h1><small>wij maken er een </small><br>belevenis van</h1>
-                        <p><a href="#intro" class="btn btn-primary btn-large">websites die iets betekenen</a></p>
+                        <p><a href="#intro" data-menu-top="1800" class="btn btn-primary btn-large">websites die iets betekenen</a></p>
                     </div>
                 </div>
             </div>
     </header>
 
     <section class="coast" data-2000="top:0%;" data-2001="top:-100%;">
-        <h1 class="text-center">Hier coast logo</h1>
+        <div class="container">
+            <div class="vert-center">
+                <div class="row story-width">
+                    <div class="col-6 col-offset-3 text-center">
+                        <img src="http://gouwestad.com/lex/basis/_site/img/logo.png">
+                    </div>
+                    <div class="col-12 text-center">
+                        <h3>Custom Online Animated Story Telling</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="intro" id="intro" data-1200="top:100%; opacity:1;" data-1800="top: 0;" data-2000="opacity:1;" data-2400="opacity:0;">
@@ -124,29 +135,29 @@
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                        <a href="#focus" class="btn btn-large btn-primary">you have to focus..</a>
+                        <a href="#focus" data-menu-top="2600" class="btn btn-large btn-primary">you have to focus..</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="focus" id="focus" data-2600="top:0%;" data-3200="top: -100%;">
+    <section class="focus" id="focus" data-2600="top:0%;" data-3200="top: 0%;" data-3800="top: -100%">
         <div class="container">
             <div class="vert-center">
                 <div class="row story-width">
                     <div class="col-12 text-center">
                         <div class="jumbotron">
-                            <h1 class="blur" data-200-top="color:transparent; text-shadow: 0 0 75px #fff" data-50-top="color:#fff; text-shadow: 0 0 0px #fff;">Focus</h1>
-                            <h2 data-1000-top="opacity:0; transform: translate(0,90px);" data-600-top="opacity:1; transform: translate(0,0);">"The trick isn't adding stuff. It's taking away."</h2>
-                              <small data-1200-top="opacity:0; transform: translate(0,90px)" data-900-top="opacity:1; transform: translate(0,0px)"><i class="icon-comment-alt"></i> Mark Zuckerberg <a href="www.facebook.com">Facebook CEO</a></small>
+                            <h1 class="blur" data-2400="color:transparent; text-shadow: 0 0 75px #fff" data-3000="color:#fff; text-shadow: 0 0 0px #fff;">Focus</h1>
+                            <h2 data-2400="opacity:0; transform: translate(0,90px);" data-3000="opacity:1; transform: translate(0,0);">"The trick isn't adding stuff. It's taking away."</h2>
+                              <small data-2400="opacity:0; transform: translate(0,90px)" data-3000="opacity:1; transform: translate(0,0px)"><i class="icon-comment-alt"></i> Mark Zuckerberg <a href="www.facebook.com">Facebook CEO</a></small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-     <section class="focus-content" data-2600="top: 100%;" data-3200="top: 0%" data-3800="top:-100%">
+     <section class="focus-content" data-3200="top: 100%;" data-3800="top: 0%" data-4600="top:-100%">
         <div class="container">
             <div class="row story-width">
                 <div class="col-12 text-center">
@@ -204,10 +215,10 @@
     </section>
 
 
-   <section class="design" id="design" data-3800="top: 100%;" data-4400="top: 0%">
+   <section class="design" id="design" data-3800="top: 100%;" data-4400="top: 0%" data-6200="top:0%;" data-6800="top:-100%">
         <video id="example_video_1" class="full-video" data-5000="opacity:0;" data-5800="opacity:1;"
           poster="http://video-js.zencoder.com/oceans-clip.png"
-          data-setup='{"autoplay": true, "controls": false, "loop": false}'>
+          data-setup='{"autoplay": true, "controls": false, "loop": true}'>
          <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
          <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
          <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
@@ -217,7 +228,7 @@
             <div class="row story-width text-center">
                 <div class="col-12">
                     <svg version="1.1"
-                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 1661.917 663.033" style="enable-background:new 0 0 1661.917 663.033;" xml:space="preserve" data-4400="transform[swing]: scale(1.5);" data-5400="transform: scale(1);"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 1661.917 663.033" style="enable-background:new 0 0 1661.917 663.033;" xml:space="" data-4400="transform[swing]: scale(1.5);" data-5400="transform: scale(1);"
                          >
                     <defs>
                     </defs>
@@ -252,15 +263,15 @@
             </div>
             <div class="row story-width">
                 <div class="col-12">
-                    <h2 data-800-top="opacity:0; transform: translate(0,90px);" data-400-top="opacity:1; transform: translate(0,0);">is not just what it looks like & feels like. Design is how it works</h2>
-                    <p class="text-right" data-700-top="opacity:0; transform: translate(0,90px);" data-550-top="opacity:1; transform: translate(0,0);"><em>Steve Jobs</em></p>
+                    <h2 data-5600="opacity:0; transform: translate(0,90px);" data-5900="opacity:1; transform: translate(0,0);">is not just what it looks like & feels like. Design is how it works</h2>
+                    <p class="text-right" data-5600="opacity:0; transform: translate(0,90px);" data-5900="opacity:1; transform: translate(0,0);"><em>Steve Jobs</em></p>
                 </div>
             </div>
         </div>
     </div>
     </section>
 
-    <section class="design-story">
+    <section class="design-story" data-5800="top:100%;" data-6200="top:0%">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -729,9 +740,16 @@
          <script src="http://gouwestad.com/lex/basis/_site/js/vendor/waypoints.min.js"></script>
 
          <script src="http://gouwestad.com/lex/basis/_site/js/vendor/skrollr.js"></script>
+          <script src="http://gouwestad.com/lex/basis/_site/js/vendor/skrollr.menu.min.js"></script>
+
          <script type="text/javascript">
-          skrollr.init({
-            forceHeight: false,
+          var s = skrollr.init({
+            forceHeight: false
+          });
+
+          skrollr.menu.init(s,{
+            animate: true, //skrollr will smoothly animate to the new position using `animateTo`.
+            duration: 1500, //How long the animation should take in ms.
           });
           </script>
         
