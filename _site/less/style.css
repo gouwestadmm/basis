@@ -6287,6 +6287,7 @@ header .btn:before {
 }
 
 .focus-blocks .well {
+  padding: 0 1em;
   margin-bottom: 0;
   background: none;
   border: none;
