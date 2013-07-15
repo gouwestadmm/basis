@@ -2,25 +2,32 @@
 
 .flexslider {
     background: none;
-    min-height: 18em;
 }
 
 .responsive-showcase {
-    background: url("../img/responsive-bg.jpg") no-repeat center center fixed;
-    position: relative;
-    color: #fff;
-    font-weight: 300;
-    font-size: 1.3em;
+    height: 100%;
     h1 {
-        color: #fff;
+   
     }
 }
 
+.flex-viewport{
+    position: relative;
+}
 .nav-showcase {
     background-color: #fff;
-    float: right;
+    position: absolute;
     margin-right:8em;
+    bottom: 0;
+    right: 0;
     color: @gray-dark;
+}
+
+.showcase-desktop, .showcase-laptop, .showcase-mobile, .showcase-devices{
+    .container{
+        position: relative;
+        height:100%;
+    }
 }
 
 .showcase-devices {
@@ -35,7 +42,7 @@
     }
 }
 
-.responsive-showcase {
+/*.responsive-showcase {
     .desktop{
         .opacity(0);
     }
@@ -73,19 +80,7 @@
             transition: 2s 5s ease;
         }
     }
-}
-
-.vert-box{
-    display: table;
-    width: 100%;
-    height: 100%;
-}
-
-.vert-middle{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-}
+}*/
 
 .showcase-desktop {
     img {
@@ -99,8 +94,9 @@
 
 .showcase-laptop {
     img {
-        max-width: 800px;
-        max-height: 500px;
+        position: absolute;
+        left: -50%;
+        top: 0;
     }
     p {
         line-height: 1.5em;

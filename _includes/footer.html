@@ -28,26 +28,90 @@
          <script type="text/javascript">
           var s = skrollr.init({
             forceHeight: false,
-            smoothTransition: false
           });
 
           skrollr.menu.init(s,{
             animate: true, //skrollr will smoothly animate to the new position using `animateTo`.
-            duration: 1500, //How long the animation should take in ms.
+            duration: 2500, //How long the animation should take in ms.
           });
           </script>
         
-        <!-- Start the slider up -->
+        <!-- Start the slider up 
 
         <script type="text/javascript" charset="utf-8">
           $(window).load(function() {
-            $('.flexslider').flexslider({
+            $('#voordelen').flexslider({
               animation: "slide",
-              slideshow: true,
+              slideshow: false,
+              directionNav: false,
+              controlNav: false,
+              start: function(slider) {
+                  $('a.slide_thumb').click(function(e) {
+                     e.preventDefault();
+                      $('.flexslider').show();
+                      var slideTo = $(this).attr("rel")//Grab rel value from link;
+                      var slideToInt = parseInt(slideTo)//Make sure that this value is an integer;
+                      if (slider.currentSlide != slideToInt) {
+                          slider.flexAnimate(slideToInt)//move the slider to the correct slide  (Unless the slider is also already showing the slide we want);
+                      }
+                  });
+              }
+            });
+            $('#special').flexslider({
+              animation: "slide",
+              slideshow: false,
+              directionNav: false,
               controlNav: false,
             });
           });
+        </script>-->
+
+        <script>
+          // Can also be used with $(document).ready()
+        $(document).ready(function() {
+          $('#voordelen').flexslider({
+            animation: "slide",
+            slideshow: false,
+            prevText: "",
+            nextText: "",
+            useCss: true,
+            controlNav: false,
+            multipleKeyboard: true,
+            start: function(slider) {
+              $('a.slide_thumb').click(function(e) {
+                 e.preventDefault();
+                  $('.flexslider').show();
+                  var slideTo = $(this).attr("rel")//Grab rel value from link;
+                  var slideToInt = parseInt(slideTo)//Make sure that this value is an integer;
+                  if (slider.currentSlide != slideToInt) {
+                      slider.flexAnimate(slideToInt)//move the slider to the correct slide  (Unless the slider is also already showing the slide we want);
+                  }
+              });
+          }
+           
+          });
+          $('#special').flexslider({
+              animation: "slide",
+              slideshow: false,
+              directionNav: true,
+              controlNav: false,
+              multipleKeyboard: true,
+              start: function(slider) {
+              $('a.slide_thumb').click(function(e) {
+                 e.preventDefault();
+                  $('.flexslider').show();
+                  var slideTo = $(this).attr("rel")//Grab rel value from link;
+                  var slideToInt = parseInt(slideTo)//Make sure that this value is an integer;
+                  if (slider.currentSlide != slideToInt) {
+                      slider.flexAnimate(slideToInt)//move the slider to the correct slide  (Unless the slider is also already showing the slide we want);
+                  }
+              });
+          }
+            });
+        });
         </script>
+
+
 
         <!-- Google Analytics -->
         <script>
