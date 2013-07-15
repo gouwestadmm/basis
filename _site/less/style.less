@@ -17,7 +17,7 @@
 //Site specific story styles
 
 html, body{
-	height: 9000px;
+	height: 13000px;
 }
 
 
@@ -197,21 +197,39 @@ header{
 
 	//The slides
 	.leads{
-			background: url("../img/temp.png") no-repeat left top;
+			background: url("../img/temp.png") no-repeat;
+			background-position: -10% -10%;
 			.background-size(50%);
+			.transitiondelay(0.5s, 0.3s);
+			.opacity(0);
+			&.flex-active-slide{
+				background-position: left top;
+				.opacity(1);
+			}
 			h1{
 				font-family: 'Pacifico', cursive;
 			}
 	}
+	.bekijks{
+		position: relative;
+		background: url("../img/responsive-background.jpg") no-repeat;
+		.background-size(cover);
+		.transitiondelay(0.5s, 0.8s);
+		.overlay{
+			background: url("../img/responsive-bg.jpg") no-repeat;
+			.background-size(cover);
+			.opacity(0);
+			.transitiondelay(0.5s, 0.8s);
+		}
+		&.flex-active-slide{
+			.overlay{
+				.opacity(1);
+			}
 
-	.blocks{
-		position: absolute;
-		bottom: 0;
-		margin-bottom: 0;
-		padding-bottom: 0;
-		width: 100%;
-		background: #ddd;
+		}
+		color: #fff;
 	}
+
 		.col-6, .col-sm-4, .col-lg-2{
 			padding-left: 0;
 			padding-right: 0;
@@ -258,6 +276,16 @@ header{
 	}
 }
 
+// navigatie elementen bij de slider
+.blocks{
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	width: 100%;
+	background: @gray-lighter;
+}
+
 .design{
 	height: 100%;
 	.story-width{
@@ -265,7 +293,6 @@ header{
 	}
 	.move{
 		position: relative;
-		.clearfix();
 	}
 	h2{
 		color: #fff;
@@ -274,6 +301,12 @@ header{
 		max-width: 200px;
 		border: 10px solid #fff;
 		margin-top: -2em;
+	}
+	svg{
+	height: auto;
+	max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
 	}
 }
 
@@ -291,12 +324,6 @@ header{
 	}
 }
 
-svg{
-	height: auto;
-	max-height: 100%;
-    max-width: 100%;
-    vertical-align: middle;
-}
 
 .analytics{
 		svg{
@@ -308,6 +335,10 @@ svg{
 	}
 }
 
+.resultaten{
+	.graydark();
+
+}
 .macbook{
 	position: relative;
 }
@@ -372,8 +403,7 @@ svg{
 }
 
 .flex-direction-nav a{
-	background: #222;
-    color: #FFFFFF;
+    color: rgba(0,0,0,0.2);
     display: block;
     font-family: FontAwesome;
     font-size: 1.9em;
@@ -387,6 +417,14 @@ svg{
     top: 50%;
     width: 1em;
     z-index: 100;
+    text-indent: 0;
+    &:hover{
+    	text-decoration: none;
+    	color: rgba(0,0,0,0.4);
+    }
+    &:focus{
+    	text-decoration: none;
+    }
 	&.flex-next{
 		right: 0;
 		left: auto;
