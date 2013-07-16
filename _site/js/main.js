@@ -16,7 +16,9 @@
 */
 
 
-
+$(window).load(function() {
+  $(".loading").addClass("loaded");
+});
 
 
 // Show the sliding nav

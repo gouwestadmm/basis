@@ -15,11 +15,6 @@ section{
 }
 
 
-.story-width{
-	max-width: 75%;
-	margin: 0 auto;
-}
-
 .overlay{
 	position: absolute;
 	top: 0;
@@ -39,4 +34,13 @@ section{
 	-o-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+}
+
+
+// Changes on tablet width
+@media (min-width: @screen-tablet) {
+	.story-width{
+		max-width: 75%;
+		margin: 0 auto;
+	}
 }

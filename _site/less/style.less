@@ -25,6 +25,16 @@ body{
 	background: #fefefe;
 }
 
+.loading{
+	background: @brand-primary;
+	z-index: 1000;
+	position: fixed;
+	.transitiondelay(0.3s, 0.8s);
+	&.loaded{
+		top: -100%;
+	}
+}
+
 .jumbotron{
 	background: none;
 }
@@ -172,10 +182,11 @@ header{
 	top:100%;
 }
 
-	.flexslider, .flexslider-twee, .flex-viewport, .slides, .slides li{
-		width: 100%;
-		height: 100%;
-	}
+.flexslider, .flexslider-twee, .flex-viewport, .slides, .slides li{
+	width: 100%;
+	height: 100%;
+}
+
 .focus-blocks{
 	padding-bottom: 0;
 	height: 100%;
@@ -192,13 +203,26 @@ header{
 		margin-bottom: 2em;
 
 	}
-
+}
 
 	//The slides
+	.slides{
+		h1{
+			color: @text-color;
+			small{
+				letter-spacing: -0.02em;
+			}
+			span{
+				font-family: 'Pacifico', cursive;
+				color: @brand-info;
+				font-size: 1.4em;
+			}
+		}
+	}
 	.leads{
 			background: url("../img/temp.png") no-repeat;
 			background-position: -10% -10%;
-			.background-size(50%);
+			.background-size(65%);
 			.transitiondelay(0.5s, 0.3s);
 			.opacity(0);
 			&.flex-active-slide{
@@ -211,11 +235,9 @@ header{
 	}
 	.bekijks{
 		position: relative;
-		background: url("../img/responsive-background.jpg") no-repeat;
 		.background-size(cover);
 		.transitiondelay(0.5s, 0.8s);
 		.overlay{
-			background: url("../img/responsive-bg.jpg") no-repeat;
 			.background-size(cover);
 			.opacity(0);
 			.transitiondelay(0.5s, 0.8s);
@@ -228,53 +250,49 @@ header{
 		}
 		color: #fff;
 	}
-
-		.col-6, .col-sm-4, .col-lg-2{
-			padding-left: 0;
-			padding-right: 0;
+	// Volgers slide
+	.volgers{
+		position: relative;
+		background: url("../img/meervolgers.png") no-repeat -40% 20%;
+		.background-size(80%);
+		.overlay-img{
+			background: url("../img/meervolgers-overlay.png") no-repeat -40% 20%;
+			.background-size(80%);
+			.opacity(0);
+			z-index: 1;
 		}
-		.well{
-			background: none;
-			border: none;
-			border-radius: 0;
-			margin-bottom: 0;
-			padding: 0 1em;
-			.icon-super{
-				color: rgba(0,0,0,0.5);
-				font-size: 2em;
-				width: 30%;
-				padding: 0.7em 0;
+		.pop-up{
+			background: url("../img/meervolgers-melding.png") no-repeat;
+			background-position: -40% 50%;
+			.background-size(80%);
+			.translate(0,10%);
+			.opacity(0);
+			z-index: 1;
+		}
+		&.flex-active-slide{
+			.overlay-img{
+				.opacity(1);
+				.transitiondelay(0.9s, 0.1s)
 			}
-			h6{
-				small{
-					font-weight: 300;
-				}
-				font-weight:500;
-				width: 60%;
-				font-size: 1.2em;
-				padding-left: 10%;
-				display: inline-block;
+			.pop-up{
+				.translate(0,0);
+				.opacity(1);
+				transition: 0.3s all 1s;
 			}
-			&:hover{
-				background: #fff;	
-				color: @brand-primary;
-				.scale(1.1) !important;
-				.transition(0.1s);
-				.icon-super{
-					color: @brand-primary;
-				}
-			}
-			&.open{
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				display: block;
-				z-index: 2;
-			}
+		}
+		.container{
+			position: relative;
+			z-index: 10;
+		}
+		h1 img{
+			max-width: 130px;
+			display: inline !important;
+			border: 8px solid #fff;
+			box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+		}
 	}
-}
+
+
 
 // navigatie elementen bij de slider
 .blocks{
@@ -284,6 +302,59 @@ header{
 	padding-bottom: 0;
 	width: 100%;
 	background: @gray-lighter;
+	box-shadow: 0 0 3px rgba(0,0,0,0.05), inset 0 1px 2px rgba(255,255,255,0.85);
+	.col-6, .col-sm-4, .col-lg-2{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		a .well{
+			background: none;
+			border: none;
+			border-radius: 0;
+			margin-bottom: 0;
+			padding: 0.8em 1em;
+			.transition(0.2s);
+			.icon-stack{
+				color: #fff;
+				font-size: 1.3em;
+				width: 30%;
+				vertical-align: -25%;
+				padding: 0em 0.2em;
+				.icon-stack-base{
+					color: @text-color;
+				}
+				&:hover{
+					text-decoration: none;
+				}
+				i:hover{
+					text-decoration: none;
+				}
+			}
+			h6{
+				small{
+					font-weight: 300;
+				}
+				font-family: @font-family-base;
+				color: @text-color;
+				font-weight:300;
+				width: 60%;
+				margin: 0.2em 0 0.6em;
+				font-size: 1.1em;
+				line-height: 1.05em;
+				padding-left: 10%;
+				display: inline-block;
+			}
+			&:hover{
+				background: #fff;
+				.icon-stack-base, h6{	
+					color: @brand-info;
+				}
+				i{
+					.scale(1.05);
+					.transition(0.2s);
+				}
+			}
+		}
 }
 
 .design{
