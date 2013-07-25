@@ -17,13 +17,22 @@
 //Site specific story styles
 
 html, body{
-	height: 8000px;
+	height: 13000px;
 }
-
 
 body{
 	overflow: scroll;
 	background: #fefefe;
+}
+
+.loading{
+	background: @brand-primary;
+	z-index: 1000;
+	position: fixed;
+	.transitiondelay(0.3s, 0.8s);
+	&.loaded{
+		top: -100%;
+	}
 }
 
 .jumbotron{
@@ -46,7 +55,7 @@ body{
 
 
 header{
-	background: url("../img/header.jpg") no-repeat;
+	background: url("../img/beach.jpg") no-repeat;
 	.background-size(cover);
 	color: #fff;
 	z-index: 12;
@@ -125,6 +134,10 @@ header{
 		position: relative;
 		height: 100%;
 	}
+	h2, h3, h4{
+		position: relative;
+	}
+
 	.btn{
 		margin-top: 3em;
 	}
@@ -156,52 +169,192 @@ header{
 	h2, small, a{
 		color: #fff;
 	}
+	img{
+		max-width: 200px;
+		border: 10px solid #fff;
+		margin-left: 3em;
+	}
 
 }
 
 //focus-content section
 .focus-content{
+	top:100%;
+}
+
+.flexslider, .flexslider-twee, .flex-viewport, .slides, .slides li{
 	width: 100%;
 	height: 100%;
 }
 
 .focus-blocks{
-	background: url("../img/header.jpg") no-repeat center center fixed;
+	padding-bottom: 0;
 	height: 100%;
 	width: 100%;
 	left: 0;
 	top: 0;
-	.background-size(cover);
-		.col-6, .col-sm-4, .col-lg-2{
-			padding-left: 1em;
-			padding-right: 1em;
+	.container{
+		position: relative;
+		height: 100%;
+	}
+	.text-box .col-8{
+		padding: 2em;
+		margin-top: 2em;
+		margin-bottom: 2em;
+
+	}
+}
+
+	//The slides
+	.slides{
+		h1{
+			color: @text-color;
+			small{
+				letter-spacing: -0.02em;
+			}
+			span{
+				font-family: 'Pacifico', cursive;
+				color: @brand-info;
+				font-size: 1.4em;
+			}
 		}
-		.well{
-		background: rgba(255,255,255,0.75);
-		color: rgba(0,0,0,0.5);
-		border: 1px solid rgba(255,255,255,0.3);
-			.icon-super{
-				color: rgba(0,0,0,0.5);
+	}
+	.leads{
+			background: url("../img/temp.png") no-repeat;
+			background-position: -10% -10%;
+			.background-size(65%);
+			.transitiondelay(0.5s, 0.3s);
+			.opacity(0);
+			&.flex-active-slide{
+				background-position: left top;
+				.opacity(1);
 			}
-			&:hover{
-				background: #fff;	
-				color: @brand-primary;
-				.scale(1.1) !important;
-				.transition(0.3s);
-				.icon-super{
-					color: @brand-primary;
-				}
-			}
-			&.open{
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				display: block;
-				z-index: 2;
+			h1{
+				font-family: 'Pacifico', cursive;
 			}
 	}
+	.bekijks{
+		position: relative;
+		.background-size(cover);
+		.transitiondelay(0.5s, 0.8s);
+		.overlay{
+			.background-size(cover);
+			.opacity(0);
+			.transitiondelay(0.5s, 0.8s);
+		}
+		&.flex-active-slide{
+			.overlay{
+				.opacity(1);
+			}
+
+		}
+		color: #fff;
+	}
+	// Volgers slide
+	.volgers{
+		position: relative;
+		background: url("../img/meervolgers.png") no-repeat -40% 20%;
+		.background-size(80%);
+		.overlay-img{
+			background: url("../img/meervolgers-overlay.png") no-repeat -40% 20%;
+			.background-size(80%);
+			.opacity(0);
+			z-index: 1;
+		}
+		.pop-up{
+			background: url("../img/meervolgers-melding.png") no-repeat;
+			background-position: -40% 50%;
+			.background-size(80%);
+			.translate(0,10%);
+			.opacity(0);
+			z-index: 1;
+		}
+		&.flex-active-slide{
+			.overlay-img{
+				.opacity(1);
+				.transitiondelay(0.9s, 0.1s)
+			}
+			.pop-up{
+				.translate(0,0);
+				.opacity(1);
+				transition: 0.3s all 1s;
+			}
+		}
+		.container{
+			position: relative;
+			z-index: 10;
+		}
+		h1 img{
+			max-width: 130px;
+			display: inline !important;
+			border: 8px solid #fff;
+			box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+		}
+	}
+
+
+
+// navigatie elementen bij de slider
+.blocks{
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	width: 100%;
+	background: @gray-lighter;
+	box-shadow: 0 0 3px rgba(0,0,0,0.05), inset 0 1px 2px rgba(255,255,255,0.85);
+	.col-6, .col-sm-4, .col-lg-2{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		a .well{
+			background: none;
+			border: none;
+			border-radius: 0;
+			margin-bottom: 0;
+			padding: 0.8em 1em;
+			.transition(0.2s);
+			.icon-stack{
+				color: #fff;
+				font-size: 1.3em;
+				width: 30%;
+				vertical-align: -25%;
+				padding: 0em 0.2em;
+				.icon-stack-base{
+					color: @text-color;
+				}
+				&:hover{
+					text-decoration: none;
+				}
+				i:hover{
+					text-decoration: none;
+				}
+			}
+			h6{
+				small{
+					font-weight: 300;
+				}
+				font-family: @font-family-base;
+				color: @text-color;
+				font-weight:300;
+				width: 60%;
+				margin: 0.2em 0 0.6em;
+				font-size: 1.1em;
+				line-height: 1.05em;
+				padding-left: 10%;
+				display: inline-block;
+			}
+			&:hover{
+				background: #fff;
+				.icon-stack-base, h6{	
+					color: @brand-info;
+				}
+				i{
+					.scale(1.05);
+					.transition(0.2s);
+				}
+			}
+		}
 }
 
 .design{
@@ -211,10 +364,20 @@ header{
 	}
 	.move{
 		position: relative;
-		.clearfix();
 	}
 	h2{
 		color: #fff;
+	}
+	img{
+		max-width: 200px;
+		border: 10px solid #fff;
+		margin-top: -2em;
+	}
+	svg{
+	height: auto;
+	max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
 	}
 }
 
@@ -232,12 +395,6 @@ header{
 	}
 }
 
-svg{
-	height: auto;
-	max-height: 100%;
-    max-width: 100%;
-    vertical-align: middle;
-}
 
 .analytics{
 		svg{
@@ -249,61 +406,12 @@ svg{
 	}
 }
 
+.resultaten{
+	.graydark();
+
+}
 .macbook{
 	position: relative;
-}
-
-// Introductie sectie styles
-.introduction{
-	.gray();
-	.blocks{
-		max-width: 75%; //Moet vanaf tablet worden
-		margin: 0 auto;
-		box-shadow: 0 0 5px rgba(0,0,0,0.4);
-		position: relative;
-		overflow: hidden;
-		perspective: 1000px; 
-    	perspective-origin: 50% 25%;
-		& .col-lg-4{
-			padding: 3em 0;
-			border-bottom: 1px solid rgba(0,0,0,0.1);
-			border-right:1px solid rgba(0,0,0,0.1);
-			border-top: 1px solid rgba(255,255,255,0.2);
-		}
-		.block-overlay{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: #fff;
-			z-index: -1;
-			.opacity(0.6);
-			-moz-transform-style: preserve-3d;
-		    transition: all 0.3s ease;
-		    -moz-transform: translateZ(-1500px);
-		    transform: translateZ(-1500px);
-			&.open{
-				.transition(0.4s);
-				.opacity(1);
-				z-index: 10;
-				-webkit-transform: translateZ(0px);
-				-moz-transform: translateZ(0px);
-				-o-transform: translateZ(0px);
-				-ms-transform: translateZ(0px);
-				transform: translateZ(0px);
-			}
-			p{
-				padding: 3em;
-				color: @gray;
-			}
-		}
-	}
-	.blocks > .col-12{
-		min-height: 6em;
-		.graylighter();
-		color: @gray;
-	}
 }
 
 .special{
@@ -363,6 +471,35 @@ svg{
 
 .flexslider{
 	overflow: hidden;
+}
+
+.flex-direction-nav a{
+    color: rgba(0,0,0,0.2);
+    display: block;
+    font-family: FontAwesome;
+    font-size: 1.9em;
+    font-weight: normal;
+    height: 1.45em;
+    left: 0;
+    line-height: 1.7em;
+    margin-top: -45px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 1em;
+    z-index: 100;
+    text-indent: 0;
+    &:hover{
+    	text-decoration: none;
+    	color: rgba(0,0,0,0.4);
+    }
+    &:focus{
+    	text-decoration: none;
+    }
+	&.flex-next{
+		right: 0;
+		left: auto;
+	}
 }
 
 //Portfolio section styles
