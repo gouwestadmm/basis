@@ -29,11 +29,105 @@ body{
 	background: @brand-primary;
 	z-index: 1000;
 	position: fixed;
-	.transitiondelay(0.3s, 0.8s);
+	i{
+		-webkit-animation: lightup 1s ease-in-out infinite;
+		-moz-animation: lightup 1s ease-in-out infinite;
+		-ms-animation: lightup 1s ease-in-out infinite;
+		-o-animation: lightup 1s ease-in-out infinite;
+		animation: lightup 1s ease-in-out infinite;
+		&.twee{
+			-webkit-animation-delay: 0.25s;
+			-moz-animation-delay: 0.25s;
+			-ms-animation-delay: 0.25s;
+			-o-animation-delay: 0.25s;
+			animation-delay: 0.25s;
+		}
+		&.drie{
+			-webkit-animation-delay: 0.5s;
+			-moz-animation-delay: 0.5s;
+			-ms-animation-delay: 0.5s;
+			-o-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		&.vier{
+			-webkit-animation-delay: 0.75s;
+			-moz-animation-delay: 0.75s;
+			-ms-animation-delay: 0.75s;
+			-o-animation-delay: 0.75s;
+			animation-delay: 0.75s;
+		}
+	}
 	&.loaded{
 		top: -100%;
 	}
 }
+
+@keyframes "lightup" {
+ 0% {
+    color: rgba(0,0,0,0.3);
+ }
+ 50% {
+    color: rgba(0,0,0,0.6);
+ }
+ 100% {
+    color: rgba(0,0,0,0.3);
+ }
+
+}
+
+@-moz-keyframes lightup {
+ 0% {
+   color: rgba(0,0,0,0.3);
+ }
+ 50% {
+   color: rgba(0,0,0,0.6);
+ }
+ 100% {
+   color: rgba(0,0,0,0.3);
+ }
+
+}
+
+@-webkit-keyframes "lightup" {
+ 0% {
+   color: rgba(0,0,0,0.3);
+ }
+ 50% {
+   color: rgba(0,0,0,0.6);
+ }
+ 100% {
+   color: rgba(0,0,0,0.3);
+ }
+
+}
+
+@-ms-keyframes "lightup" {
+ 0% {
+   color: rgba(0,0,0,0.3);
+ }
+ 50% {
+   color: rgba(0,0,0,0.6);
+ }
+ 100% {
+   color: rgba(0,0,0,0.3);
+ }
+
+}
+
+@-o-keyframes "lightup" {
+ 0% {
+   color: rgba(0,0,0,0.3);
+ }
+ 50% {
+   color: rgba(0,0,0,0.6);
+ }
+ 100% {
+   color: rgba(0,0,0,0.3);
+ }
+
+}
+
+
 
 .jumbotron{
 	background: none;
@@ -60,7 +154,7 @@ header{
 	color: #fff;
 	z-index: 12;
 	position: fixed;
-	height: 100%;
+	height: 150%;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -161,13 +255,14 @@ header{
 	}
 		//blurred text
 	.blur{
-		font-size: 14em;
+		font-size: 10em;
 		color: transparent;
 		text-shadow: 0 0 0.2em #fff;
 		
 	}
 	h2, small, a{
 		color: #fff;
+		font-weight: 300;
 	}
 	img{
 		max-width: 200px;
@@ -213,10 +308,11 @@ header{
 				letter-spacing: -0.02em;
 			}
 			span{
-				font-family: 'Pacifico', cursive;
+				font-family: @font-family-script;
 				color: @brand-info;
 				font-size: 1.4em;
-			}
+				font-weight: normal;
+			}	
 		}
 	}
 	.leads{
@@ -228,9 +324,6 @@ header{
 			&.flex-active-slide{
 				background-position: left top;
 				.opacity(1);
-			}
-			h1{
-				font-family: 'Pacifico', cursive;
 			}
 	}
 	.bekijks{
@@ -253,8 +346,16 @@ header{
 	// Volgers slide
 	.volgers{
 		position: relative;
+		background: url("../img/blur.jpg") no-repeat;
+		.background-size(cover);
+		color: #fff;
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+		.phones{
 		background: url("../img/meervolgers.png") no-repeat -40% 20%;
 		.background-size(80%);
+		.translate(0,20%);
+		.transitiondelay(0.3s, 0.2s);
+		}
 		.overlay-img{
 			background: url("../img/meervolgers-overlay.png") no-repeat -40% 20%;
 			.background-size(80%);
@@ -270,6 +371,9 @@ header{
 			z-index: 1;
 		}
 		&.flex-active-slide{
+			.phones{
+				.translate(0,0);
+			}
 			.overlay-img{
 				.opacity(1);
 				.transitiondelay(0.9s, 0.1s)
@@ -284,11 +388,17 @@ header{
 			position: relative;
 			z-index: 10;
 		}
-		h1 img{
+		h1 {
+			color: #fff;
+			img{
 			max-width: 130px;
 			display: inline !important;
 			border: 8px solid #fff;
 			box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+			}
+		}
+		i{
+			color: #fff;
 		}
 	}
 
@@ -310,6 +420,8 @@ header{
 		a .well{
 			background: none;
 			border: none;
+			border-right: 1px solid rgba(0,0,0,0.05);
+			border-left: 1px solid rgba(255,255,255,0.6);
 			border-radius: 0;
 			margin-bottom: 0;
 			padding: 0.8em 1em;
