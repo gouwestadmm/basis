@@ -316,14 +316,16 @@ header{
 		}
 	}
 	.leads{
-			background: url("../img/temp.png") no-repeat;
-			background-position: -10% -10%;
-			.background-size(65%);
-			.transitiondelay(0.5s, 0.3s);
-			.opacity(0);
-			&.flex-active-slide{
-				background-position: left top;
-				.opacity(1);
+			position: relative;
+			background: url("../img/gmail.png") no-repeat;
+			.background-size(cover);
+			.apple-menu {
+				display: inline-block;
+				background-color: #e8e8e8;
+				width: 100%;
+				color: #000;
+				font-size: 0.7em;
+				padding-left: 3em;
 			}
 	}
 	.bekijks{
@@ -400,6 +402,12 @@ header{
 		i{
 			color: #fff;
 		}
+	}
+
+	.downloads {
+		position: relative;
+		background: url("../img/downloadsbg.jpg") no-repeat;
+		.background-size(cover);
 	}
 
 
