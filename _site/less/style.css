@@ -5631,10 +5631,9 @@ h6 span {
           transition: all 0.3s ease;
 }
 
-.nav-side h3 {
-  padding: 0 1em;
-  font-size: 2em;
-  font-weight: 300;
+.nav-side img {
+  max-width: 100px;
+  margin-top: 1em;
 }
 
 .nav-side li {
@@ -6162,8 +6161,8 @@ header {
 
 header .overlay {
   background: #f9b233;
-  opacity: 0.35;
-  filter: alpha(opacity=35);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }
 
 header .container {
