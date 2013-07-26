@@ -6327,25 +6327,21 @@ header .btn:before {
 }
 
 .leads {
-  background: url("../img/temp.png") no-repeat;
-  background-position: -10% -10%;
-  -webkit-background-size: 65%;
-     -moz-background-size: 65%;
-       -o-background-size: 65%;
-          background-size: 65%;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: 0.3s all 0.5s ease;
-     -moz-transition: 0.3s all 0.5s ease;
-      -ms-transition: 0.3s all 0.5s ease;
-       -o-transition: 0.3s all 0.5s ease;
-          transition: 0.3s all 0.5s ease;
+  position: relative;
+  background: url("../img/gmail.png") no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
 
-.leads.flex-active-slide {
-  background-position: left top;
-  opacity: 1;
-  filter: alpha(opacity=100);
+.leads .apple-menu {
+  display: inline-block;
+  width: 100%;
+  padding-left: 3em;
+  font-size: 0.7em;
+  color: #000;
+  background-color: #e8e8e8;
 }
 
 .bekijks {
@@ -6485,6 +6481,15 @@ header .btn:before {
 
 .volgers i {
   color: #fff;
+}
+
+.downloads {
+  position: relative;
+  background: url("../img/downloadsbg.jpg") no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
 
 .blocks {
