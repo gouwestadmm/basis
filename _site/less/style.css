@@ -6350,7 +6350,7 @@ header .btn:before {
 
 @media (min-width: 768px) {
   .leads .meerleads {
-    background: url("../img/leads/meerleadsempty.png") no-repeat;
+    background: url("../img/leads/meerleadsempty.jpg") no-repeat;
   }
   .leads .mailone {
     background: url("../img/leads/meerleadsemail1.png") no-repeat;
@@ -6365,8 +6365,8 @@ header .btn:before {
   .leads .mailone,
   .leads .mailtwo,
   .leads .mailthree {
-    margin-bottom: -30%;
-    background-position: 180% top;
+    background-position: bottom right;
+    background-size: 70%;
   }
   .leads .mailthree {
     opacity: 0;
