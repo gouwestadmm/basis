@@ -6422,36 +6422,12 @@ header .btn:before {
 }
 
 .bekijks {
-  position: relative;
   color: #fff;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  -webkit-transition: 0.8s all 0.5s ease;
-     -moz-transition: 0.8s all 0.5s ease;
-      -ms-transition: 0.8s all 0.5s ease;
-       -o-transition: 0.8s all 0.5s ease;
-          transition: 0.8s all 0.5s ease;
 }
 
-.bekijks .overlay {
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: 0.8s all 0.5s ease;
-     -moz-transition: 0.8s all 0.5s ease;
-      -ms-transition: 0.8s all 0.5s ease;
-       -o-transition: 0.8s all 0.5s ease;
-          transition: 0.8s all 0.5s ease;
-}
-
-.bekijks.flex-active-slide .overlay {
-  opacity: 1;
-  filter: alpha(opacity=100);
+.bekijks .wallpaper {
+  height: 50%;
+  background: url("../img/downloadsbg.jpg") center center no-repeat;
 }
 
 .volgers {
@@ -6567,6 +6543,70 @@ header .btn:before {
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
+}
+
+.verkopen {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .verkopen .meerverkopen {
+    background: url("../img/verkopen/meerverkopenempty.png") no-repeat;
+  }
+  .verkopen .boxone {
+    background: url("../img/verkopen/doos1.png") no-repeat;
+  }
+  .verkopen .boxtwo {
+    background: url("../img/verkopen/doos2.png") no-repeat;
+  }
+  .verkopen .meerverkopen,
+  .verkopen .boxone,
+  .verkopen .boxtwo {
+    background-position: center left;
+    background-size: 50%;
+  }
+  .verkopen .boxtwo {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate(0, -20%);
+       -moz-transform: translate(0, -20%);
+        -ms-transform: translate(0, -20%);
+         -o-transform: translate(0, -20%);
+            transform: translate(0, -20%);
+  }
+  .verkopen .boxone {
+    -webkit-transform: translate(0, -90%);
+       -moz-transform: translate(0, -90%);
+        -ms-transform: translate(0, -90%);
+         -o-transform: translate(0, -90%);
+            transform: translate(0, -90%);
+  }
+  .verkopen.flex-active-slide .boxtwo {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate(0, 0%);
+       -moz-transform: translate(0, 0%);
+        -ms-transform: translate(0, 0%);
+         -o-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+    -webkit-transition: 0.4s all 1.4s ease;
+       -moz-transition: 0.4s all 1.4s ease;
+        -ms-transition: 0.4s all 1.4s ease;
+         -o-transition: 0.4s all 1.4s ease;
+            transition: 0.4s all 1.4s ease;
+  }
+  .verkopen.flex-active-slide .boxone {
+    -webkit-transform: translate(0, 0%);
+       -moz-transform: translate(0, 0%);
+        -ms-transform: translate(0, 0%);
+         -o-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+    -webkit-transition: 0.5s all 1s ease;
+       -moz-transition: 0.5s all 1s ease;
+        -ms-transition: 0.5s all 1s ease;
+         -o-transition: 0.5s all 1s ease;
+            transition: 0.5s all 1s ease;
+  }
 }
 
 .blocks {
