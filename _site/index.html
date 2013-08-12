@@ -75,9 +75,9 @@
 			<i class="icon-reorder"></i>
 		</a>
 	</div>
-	<div class="nav-side" id="slide-nav">
-		<h3>Gouwestad sites</h3>
-		<ul class="nav nav-pills nav-stacked">
+	<div class="nav-side text-center" id="slide-nav">
+		<img src="http://localhost:4000/img/logo.png">
+		<ul class="nav nav-pills nav-stacked text-left">
 		    <li><a href="#" class="menu-link"><i class="icon-thumbs-up"></i>  Een nieuw soort <strong>website</strong></a></li>
 		    <li><a href="#" class="menu-link"><i class="icon-compass"></i> Gericht op <strong>resultaat</strong></a></li>
 		    <li><a href="#design" data-menu-top="6000" class="menu-link"><i class="icon-pencil"></i> Handgemaakt <strong>design</strong></a></li>
@@ -98,7 +98,7 @@
         </div>
     </div>
 
-    <header data-400="transform[swing]: scale(1); opacity:1;" data-1000="transform: scale(3); opacity:0; top: 0%;" data-1001="top:-300%;">
+    <header data-400="top:0%" data-1000="top: -100%;">
         <video id="example_video_1" class="full-video visible-lg" 
             poster="http://video-js.zencoder.com/oceans-clip.png"
             data-setup='{"autoplay": true, "controls": false, "loop": true}'>
@@ -107,13 +107,14 @@
               <source src="http://gouwestad.com/lex/basis/_site/img/coast.ogv" type='video/ogg' />
         </video>
         <div class="overlay"></div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="jumbotron" data-50="opacity: 1; margin-top: 0%;" data-1000="margin-top: -50%;">
-                    <img src="http://localhost:4000/img/logo-notext.png">
-                    <h1>A new online <strong>Exposure</strong></h1>
-                    <h5>websites die verkopen</h5>
-                    <p><a href="#intro" data-menu-top="1800" class="btn btn-primary btn-large">een nieuwe manier om je online te presenteren</a></p>
+        <div class="container">
+            <div class="row story-width">
+                <div class="col-12 text-center">
+                    <div class="jumbotron" data-50="opacity: 1; margin-top: 0%;" data-1000="margin-top: -50%;">
+                        <img src="http://localhost:4000/img/logo.png">
+                        <h1>een website die <span>jouw verhaal</span> verteld</h1>
+                        <p><a href="#intro" data-menu-top="2000" class="btn btn-large">een nieuwe manier om je online te presenteren</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,9 +123,9 @@
   <section class="coast" data-2000="top:0%;" data-2001="top:-100%">
         <div class="container">
             <div class="vert-center">
-                <div class="row story-width" data-600="opacity:0;" data-1000="transform: scale(1); opacity:1;" data-1900="transform: scale(3); opacity:0;" >
+                <div class="row story-width">
                     <div class="col-6 col-offset-3 text-center">
-                        <img src="http://localhost:4000/img/logo.png">
+                        <img src="http://localhost:4000/img/logo-color.png">
                     </div>
                     <div class="col-12 text-center">
                         <h3>Custom Online Animated Story Telling</h3>
@@ -134,7 +135,8 @@
         </div>
     </section> 
 
-    <section class="intro" id="intro" data-1000="top:100%;" data-1200="background-position: 120% 0;" data-1950="top: 0%;" data-2000="background-position: 100% 0;" data-2200="opacity:1;" data-2600="opacity:0; top:0%; background-position: 120% 0;" data-2602="top:-100%;" >
+    <section class="intro" id="intro" data-1000="top:100%;" data-1950="top: 0%;" data-2200="opacity:1;" data-2600="opacity:0; top:0%; background-position: 120% 0;" data-2602="top:-100%;" >
+        <div class="overlay" data-1200="background-position: 120% 0;" data-2000="background-position: 100% 0;"></div>
         <div class="container">
             <div class="vert-center">
                 <div class="row text-center">
@@ -166,7 +168,7 @@
                 <div class="row story-width">
                     <div class="col-12 text-center">
                         <div class="jumbotron">
-                            <h1 class="blur" data-2400="color:transparent; text-shadow: 0 0 75px #fff" data-3000="color:#fff; text-shadow: 0 0 0px #fff;">Focus</h1>
+                            <h1 class="blur" data-2400="color:transparent; text-shadow: 0 0 75px #fff" data-3000="color:#fff; text-shadow: 0 0 0px #fff;"><span>Focus</span></h1>
                             <h2 data-2400="opacity:0; transform: translate(0,90px);" data-3000="opacity:1; transform: translate(0,0);">"The trick isn't adding stuff. It's taking away."</h2>
                               <small data-2400="opacity:0; transform: translate(0,90px)" data-3000="opacity:1; transform: translate(0,0px)"><i class="icon-comment-alt"></i> Mark Zuckerberg</small>
                               <img src="http://localhost:4000/img/facebook.jpg" class="img-circle" data-2400="transform[bounce]: scale(0); opacity:0" data-3000="transform: scale(1); opacity: 1;">
@@ -193,35 +195,33 @@
         <div class="flexslider" id="voordelen">
             <ul class="slides">
                 <li class="leads active-slide" id="bekijks">
-                    <div class="apple-menu">
-                        <p><i class="icon-apple float-left"></i>
-                        Coast
-                        <i class="icon-dropbox"></i>
-                        <i class="icon-volume-up"></i>
-                        <i class="icon-signal"></i>
-                        do 14:14
-                        <i class="icon-search"></i></p>
-                    </div>
+                    <div class="overlay meerleads"></div>
+                    <div class="overlay mailone"></div>
+                    <div class="overlay mailtwo"></div>
+                    <div class="overlay mailthree"></div>
                     <div class="container">
                         <div class="vert-center">
-                            <div class="row text-center text-box">
-                                <div class="col-6 col-offset-6">
+                            <div class="row text-box">
+                                <div class="col-5">
                                     <h1>Meer Leads</h1>
                                     <img src="http://localhost:4000/img/temp.png" class="visible-sm">
-                                   <p>Good design is memorable and sharable. Potential customers will share your unique site with their friends and colleagues, resulting in more traffic for you.</p>
+                                   <p>Bezoekers laten niet snel contact gegevens achter, een goed design en concrete content geven het vertrouwen wat de bezoeker verwacht.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="verkopen">
+                <li class="verkopen active-slide">
+                    <div class="overlay boxone"></div>
+                    <div class="overlay boxtwo"></div>
+                    <div class="overlay meerverkopen"></div>
                     <div class="container">
                         <div class="vert-center">
                             <div class="row text-center text-box">
                                 <div class="col-4 col-offset-8">
-                                    <h1><small>meer</small> <span>verkopen</span></h1>
+                                    <h1>Meer Verkopen</h1>
                                     <img src="http://localhost:4000/img/temp.png" class="visible-sm">
-                                   <p>People don’t just hand over their information to anyone. A reputable site, a delightful submission process and a compelling visual narrative will drive more leads for you.
+                                   <p>Een goed verhaal is de basis voor een verkoop, dit geanimeerd en stijlvol vormgegeven draagt direct bij aan meer verkopen of inschrijvingen. Het draait allemaal om user experience.</p> 
                                    </p>
                                 </div>
                             </div>
@@ -240,8 +240,7 @@
                                         <h1><img class="img-circle" src="http://progroep.github.io/Sharebiz/img/hans-ouwerkerk.jpg"> <small>meer</small> <span>volgers</span></h1>
                                     </div>
                                     <img src="http://localhost:4000/img/temp.png" class="visible-sm">
-                                   <p class="lead">Good design is memorable and sharable. Potential customers will share your unique site with their friends and colleagues, resulting in more traffic for you.</p>
-                                   <p>Good design is memorable and sharable. Potential customers will share your unique site with their friends and colleagues, resulting in more traffic for you.</p>
+                                   <p class="lead">Een betrouwbaar en sterk merk wat wordt neergezet door goede content en een superstrak design zorgen er voor dat bezoekers ook een kijkje nemen op je social media en je hier volgen.</p>
                                    <h5>
                                        <span class="icon-stack">
                                           <i class="icon-check-empty icon-stack-base"></i>
@@ -272,7 +271,7 @@
                                 <div class="col-6 col-offset-6">
                                     <h1>Meer bekijks</h1>
                                     <img src="http://localhost:4000/img/temp.png" class="visible-sm">
-                                   <p>Good design is memorable and sharable. Potential customers will share your unique site with their friends and colleagues, resulting in more traffic for you.</p>
+                                   <p>Een unieke site wordt sneller gedeeld op social media, met vrienden en familie of op het werk. Dit resulteerd in meer traffic en dus meer potentiële klanten.</p>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +284,7 @@
                                 <div class="col-6">
                                     <h1>Meer downloads</h1>
                                     <img src="http://localhost:4000/img/temp.png" class="visible-sm">
-                                   <p>Good design is memorable and sharable. Potential customers will share your unique site with their friends and colleagues, resulting in more traffic for you.</p>
+                                   <p>Het begeleiden van de bezoekers naar een sterke call-to-action op de site zorgt er voor dat je product, productinformatie of white-paper vaker wordt gedownload.</p>
                                 </div>
                             </div>
                         </div>
@@ -298,7 +297,7 @@
                                 <div class="col-6 col-offset-6">
                                     <h1>Meer signups</h1>
                                     <img src="http://localhost:4000/img/temp.png" class="visible-sm">
-                                   <p>Good design is memorable and sharable. Potential customers will share your unique site with their friends and colleagues, resulting in more traffic for you.</p>
+                                   <p>Een betrouwbare en goed opgebouwde website zorgt voor een snellere groei van een email database.</p>
                                 </div>
                             </div>
                         </div>
@@ -673,7 +672,10 @@
 
           skrollr.menu.init(s,{
             animate: true, //skrollr will smoothly animate to the new position using `animateTo`.
-            duration: 2500, //How long the animation should take in ms.
+            duration: function(currentTop, targetTop) {
+              return Math.abs(currentTop - targetTop) * 0.5;
+            },
+
           });
           </script>
         
