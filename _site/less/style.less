@@ -376,19 +376,9 @@ header{
 			
 	}
 	.bekijks{
-		position: relative;
-		.background-size(cover);
-		.transitiondelay(0.5s, 0.8s);
-		.overlay{
-			.background-size(cover);
-			.opacity(0);
-			.transitiondelay(0.5s, 0.8s);
-		}
-		&.flex-active-slide{
-			.overlay{
-				.opacity(1);
-			}
-
+		.wallpaper{
+			background: url("../img/downloadsbg.jpg") center center no-repeat;
+			height: 50%;
 		}
 		color: #fff;
 	}
@@ -455,6 +445,46 @@ header{
 		position: relative;
 		background: url("../img/downloadsbg.jpg") no-repeat;
 		.background-size(cover);
+	}
+
+	.verkopen {
+		position: relative;
+			// background-images only on screens larger than tablet
+			@media (min-width: @screen-tablet) {
+				.meerverkopen{
+					background: url("../img/verkopen/meerverkopenempty.png") no-repeat;
+				}
+				.boxone{
+					background: url("../img/verkopen/doos1.png") no-repeat;
+				}
+				.boxtwo{
+					background: url("../img/verkopen/doos2.png") no-repeat;
+				}
+				.meerverkopen, .boxone, .boxtwo {
+					background-position: center left;
+					background-size: 50%;
+				}
+				.boxtwo{
+					.opacity(0);
+					.translate(0%,-20%);
+				}
+				.boxone {
+						.translate(0%,-90%);
+					}
+				// add the active slide animations
+				&.flex-active-slide{
+					.boxtwo{
+						.opacity(1);
+						.translate(0%,0%);
+						.transitiondelay(1.4s, 0.4s);
+					}
+					.boxone{
+						.translate(0%,0%);
+						.transitiondelay(1s, 0.5s);
+					}
+				}
+			}
+
 	}
 
 
