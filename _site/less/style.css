@@ -5363,6 +5363,10 @@ section {
   background: #fff;
 }
 
+.relative {
+  position: relative;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -5397,7 +5401,7 @@ html {
 
 h1 {
   font-size: 4em;
-  color: #338ff9;
+  color: #72d4fa;
 }
 
 h2 {
@@ -6204,8 +6208,8 @@ header .btn {
   padding-left: 4em;
   margin-top: 2em;
   font-size: 0.8em;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.6);
+  color: #f9b233;
+  background: rgba(255, 255, 255, 0.98);
   border: none;
   border-radius: 0;
 }
@@ -6219,7 +6223,7 @@ header .btn:before {
   font-family: "FontAwesome";
   font-size: 1.5em;
   color: #f9b233;
-  background: rgba(255, 255, 255, 0.9);
+  border-right: 1px solid #fff;
   content: "\F0A9";
 }
 
@@ -6239,7 +6243,6 @@ header .btn:before {
   height: 100%;
   overflow: hidden;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.06);
-  background: #f4ede0;
   border-top: 1px solid #fff;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.02);
 }
@@ -6270,6 +6273,7 @@ header .btn:before {
 .focus {
   width: 100%;
   height: 100%;
+  color: #fff;
   background: #72d4fa;
 }
 
@@ -6301,6 +6305,45 @@ header .btn:before {
   top: 100%;
 }
 
+.focus {
+  color: #fff;
+}
+
+.focus h1,
+.focus h4 {
+  color: #fff;
+}
+
+.focus .btn {
+  position: relative;
+  padding: 0.5em 0.8em;
+  padding-left: 4em;
+  margin-top: 3em;
+  color: #72d4fa;
+  background: #fff;
+}
+
+.focus .btn:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  font-family: "FontAwesome";
+  font-size: 1.5em;
+  color: #72d4fa;
+  content: "\f01a";
+}
+
+.focus .tablet-background {
+  min-height: 24em;
+  background: url("http://www.google.com/nexus/images/nexus-7-new/entertainment-1200.jpg") no-repeat;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
+}
+
 .flexslider,
 .flexslider-twee,
 .flex-viewport,
@@ -6330,7 +6373,7 @@ header .btn:before {
 }
 
 .slides h1 {
-  color: #1c2f5f;
+  color: #f9b233;
 }
 
 .slides h1 small {
@@ -6341,7 +6384,6 @@ header .btn:before {
   font-family: 'Yellowtail', cursive;
   font-size: 1.4em;
   font-weight: normal;
-  color: #15c4c6;
 }
 
 .leads {
@@ -6736,6 +6778,15 @@ header .btn:before {
   vertical-align: middle;
 }
 
+.design-story {
+  height: 100%;
+}
+
+.design-story .container {
+  position: relative;
+  height: 100%;
+}
+
 .fixed-center {
   position: relative;
   top: 3em;
@@ -6757,8 +6808,9 @@ header .btn:before {
 }
 
 .resultaten {
+  height: 100%;
   color: #fff;
-  background: #1c2f5f;
+  background: #131720;
 }
 
 .macbook {
@@ -6767,10 +6819,6 @@ header .btn:before {
 
 .special {
   background: #dbdee5;
-}
-
-.showcase {
-  overflow: hidden;
 }
 
 .flexslider {

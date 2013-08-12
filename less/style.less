@@ -194,8 +194,8 @@ header{
 	}
 
 	.btn{
-		background: rgba(255,255,255,0.6);
-		color: #fff;
+		background: rgba(255,255,255,0.98);
+		color: @brand-primary;
 		position: relative;
 		font-size: 0.8em;
 		padding: 0.5em 0.8em;
@@ -204,7 +204,7 @@ header{
 		border-radius: 0;
 		padding-left: 4em;
 		&:before{
-			    background: rgba(255,255,255,0.9);
+			    border-right: 1px solid #fff;
 			    content: "\F0A9";
 			    position: absolute;
 			    top: 0;
@@ -229,7 +229,6 @@ header{
 }
 
 .intro{
-	background: @light-background;
 	border-top: 1px solid #fff;
 	box-shadow: 0 0 0 2px rgba(0,0,0,0.02);
 	height: 100%;
@@ -262,6 +261,7 @@ header{
 	background: @brand-tertiary;
 	height: 100%;
 	width: 100%;
+	color: #fff;
 	.container{
 		position: relative;
 		height: 100%;
@@ -287,10 +287,46 @@ header{
 
 }
 
+
+
+
 //focus-content section
 .focus-content{
 	top:100%;
 }
+
+.focus{
+	color: #fff;
+	h1,h4{
+		color: #fff;
+	}
+	.btn{
+		background: #fff;
+		color: @brand-tertiary;
+		margin-top: 3em;
+		position: relative;
+		padding: 0.5em 0.8em;
+		padding-left: 4em;
+		&:before{
+			    content: "\f01a";
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    height: 100%;
+			    width: 2em;
+			    font-family: "FontAwesome";
+			    font-size: 1.5em;
+			    color: @brand-tertiary;
+		}
+	}
+	.tablet-background{
+		background: url("http://www.google.com/nexus/images/nexus-7-new/entertainment-1200.jpg") no-repeat;
+		.background-size(contain);
+		min-height: 24em;
+	}
+}
+
+
 
 .flexslider, .flexslider-twee, .flex-viewport, .slides, .slides li{
 	width: 100%;
@@ -318,13 +354,12 @@ header{
 	//The slides
 	.slides{
 		h1{
-			color: @text-color;
+			color: @brand-primary;
 			small{
 				letter-spacing: -0.02em;
 			}
 			span{
 				font-family: @font-family-script;
-				color: @brand-info;
 				font-size: 1.4em;
 				font-weight: normal;
 			}	
@@ -579,6 +614,11 @@ header{
 }
 
 .design-story{
+	height: 100%;
+	.container{
+		position: relative;
+		height: 100%;
+	}
 }
 
 .fixed-center{
@@ -604,7 +644,8 @@ header{
 }
 
 .resultaten{
-	.graydark();
+	height: 100%;
+	.graydarker();
 
 }
 .macbook{
@@ -615,9 +656,6 @@ header{
 	.graylighter();
 }
 
-.showcase{
-	overflow: hidden;
-}
 
 .flexslider{
 	margin: 0;
