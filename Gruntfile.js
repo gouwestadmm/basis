@@ -74,15 +74,15 @@ module.exports = function(grunt) {
         compile: true
       },
       bootstrap: {
-        src: ['less/bootstrap/bootstrap.less'],
-        dest: 'dist/css/style.css'
+        src: ['less/style.less'],
+        dest: 'less/style.css'
       },
       min: {
         options: {
           compress: true
         },
-        src: ['less/bootstrap/bootstrap.less'],
-        dest: 'dist/css/style.min.css'
+        src: ['less/style.less'],
+        dest: 'less/style.min.css'
       },
     },
 
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:test', 'qunit']
       },
       recess: {
-        files: 'less/*/*.less',
+        files: 'less/*.less',
         tasks: ['recess']
       }
     }
