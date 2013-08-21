@@ -239,8 +239,10 @@ header{
 	overflow:hidden;
 	z-index: 12;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.06);
+	background: url("../img/beach-top-blur.jpg") no-repeat left top;
+	.background-size(cover);
 	.overlay{
-		background: url("../img/macbook-cut.png") no-repeat right 0;
+		background: url("../img/surfboard-right-vert.png") no-repeat right bottom;
 	}
 	.container{
 		position: relative;
@@ -594,11 +596,13 @@ header{
 }
 
 .design{
+	background: url("../img/water.jpg") no-repeat right bottom;
+	.background-size(cover);
 	height: 100%;
 	.story-width{
 		max-width: 60%;
 	}
-	.move{
+	.container{
 		position: relative;
 	}
 	h2{
@@ -618,7 +622,13 @@ header{
 }
 
 .design-story{
+	position: absolute;
 	height: 100%;
+	width: 100%;
+	.overlay{
+		background: url("../img/ipad-big.png") no-repeat left bottom;
+		.background-size(contain);
+	}
 	.container{
 		position: relative;
 		height: 100%;
@@ -799,3 +809,31 @@ header{
 	}
 }
 
+
+//animated styles... nog verplaatsen naar apart less bestand
+.animated{
+	height: 100%;
+}
+
+.animated-title{
+	height: 50%;
+	background: url("../img/beach-top-blur.jpg") no-repeat left top;
+	.background-size(cover);
+	.container{
+		background: url("../img/surfboards.png") no-repeat left bottom;
+		height: 100%;
+	}
+}
+
+
+.responsive{
+	&.phones{
+		background: url("../img/iphones.jpg") no-repeat center center;
+		height: 100%;
+	}
+}
+
+.end{
+	background: url("../img/surfboard-right.png") no-repeat right center;
+	height: 100%;
+}

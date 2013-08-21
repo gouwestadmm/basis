@@ -7708,12 +7708,16 @@ header .btn:before {
   height: 100%;
   overflow: hidden;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.06);
+  background: url("../img/beach-top-blur.jpg") no-repeat left top;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
   border-top: 1px solid #fff;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.02);
 }
 
 .intro .overlay {
-  background: url("../img/macbook-cut.png") no-repeat right 0;
+  background: url("../img/surfboard-right-vert.png") no-repeat right bottom;
 }
 
 .intro .container {
@@ -8180,13 +8184,17 @@ header .btn:before {
 
 .design {
   height: 100%;
+  background: url("../img/water.jpg") no-repeat right bottom;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
 }
 
 .design .story-width {
   max-width: 60%;
 }
 
-.design .move {
+.design .container {
   position: relative;
 }
 
@@ -8208,7 +8216,16 @@ header .btn:before {
 }
 
 .design-story {
+  position: absolute;
+  width: 100%;
   height: 100%;
+}
+
+.design-story .overlay {
+  background: url("../img/ipad-big.png") no-repeat left bottom;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+          background-size: contain;
 }
 
 .design-story .container {
@@ -8384,4 +8401,31 @@ header .btn:before {
           transform: translate(0, 0);
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
           transition: transform 0.4s, opacity 0.1s;
+}
+
+.animated {
+  height: 100%;
+}
+
+.animated-title {
+  height: 50%;
+  background: url("../img/beach-top-blur.jpg") no-repeat left top;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
+}
+
+.animated-title .container {
+  height: 100%;
+  background: url("../img/surfboards.png") no-repeat left bottom;
+}
+
+.responsive.phones {
+  height: 100%;
+  background: url("../img/iphones.jpg") no-repeat center center;
+}
+
+.end {
+  height: 100%;
+  background: url("../img/surfboard-right.png") no-repeat right center;
 }
