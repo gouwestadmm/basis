@@ -340,6 +340,8 @@ header{
 }
 
 .focus-blocks{
+	background: url("../img/water-blur.jpg") no-repeat;
+	.background-size(cover);
 	padding-bottom: 0;
 	height: 100%;
 	width: 100%;
@@ -357,10 +359,11 @@ header{
 	}
 }
 
-	//The slides
+	//The slide
 	.slides{
+		color: #fff;
 		h1{
-			color: @brand-primary;
+			color: #fff;
 			small{
 				letter-spacing: -0.02em;
 			}
@@ -426,10 +429,7 @@ header{
 	// Volgers slide
 	.volgers{
 		position: relative;
-		background: url("../img/blur.jpg") no-repeat;
-		.background-size(cover);
 		color: #fff;
-		text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
 		.phones{
 		background: url("../img/meervolgers.png") no-repeat -40% 20%;
 		.background-size(80%);
@@ -537,20 +537,17 @@ header{
 	margin-bottom: 0;
 	padding-bottom: 0;
 	width: 100%;
-	background: @gray-lighter;
 	box-shadow: 0 0 3px rgba(0,0,0,0.05), inset 0 1px 2px rgba(255,255,255,0.85);
+	background: #fff;
+		padding: 0.5em 0;
+	.row{
+
+	}
 	.col-6, .col-sm-4, .col-lg-2{
 			padding-left: 0;
 			padding-right: 0;
 		}
-		a .well{
-			background: none;
-			border: none;
-			border-right: 1px solid rgba(0,0,0,0.05);
-			border-left: 1px solid rgba(255,255,255,0.6);
-			border-radius: 0;
-			margin-bottom: 0;
-			padding: 0.8em 1em;
+		a {
 			.transition(0.2s);
 			.icon-stack{
 				color: #fff;
@@ -817,7 +814,7 @@ header{
 
 .animated-title{
 	height: 50%;
-	background: url("../img/beach-top-blur.jpg") no-repeat left top;
+	background: url("../img/water-blur.jpg") no-repeat left top;
 	.background-size(cover);
 	.container{
 		background: url("../img/surfboards.png") no-repeat left bottom;
