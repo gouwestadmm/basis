@@ -164,7 +164,7 @@ header{
 	width: 100%;
 	.overlay{
 		background: @brand-primary;
-		.opacity(0.3);
+		.opacity(0.6);
 	}
 	.container{
 		height: 100%;
@@ -177,19 +177,26 @@ header{
 		max-width: 150px;
 
 	}
-	h1{
-		color: #fff;
-		margin-top: 0;
-		letter-spacing: -0.05em;
-		strong{
-			font-weight: 400;
-		}
-		span{
-			letter-spacing: 0;
-			font-size: 1.55em;
-		}
-		small{
+	.jumbotron{
+		h1{
 			color: #fff;
+			margin-top: 0;
+			letter-spacing: -0.05em;
+			text-transform: uppercase;
+			font-size: 3.2em;
+			font-weight: 400;
+			strong{
+				font-weight: 400;
+			}
+			span{
+				letter-spacing: 0;
+				font-size: 1.55em;
+				font-weight: 300;
+				text-transform: none;
+			}
+			small{
+				color: #fff;
+			}
 		}
 	}
 	h6{
@@ -644,24 +651,57 @@ header{
 }
 
 
-.analytics{
-		svg{
-		 height: 100%;
-	    left: 0;
-	    position: absolute;
-	    top: 0;
-	    width: 100%;
-	}
-}
+// Resultaten page
 
 .resultaten{
 	height: 100%;
-	.graydarker();
-
+	padding-top: 10em;
+	background: url("../img/wood.jpg");
 }
+
 .macbook{
 	position: relative;
+	width: 160%;
+	text-align: center;
+	margin-left: -30%;
+	margin-right: -30%;
+	margin-top: -3em;
+	img{
+		max-width: 100%;
+	}
+	@media (min-width: @screen-desktop) {
+		position: absolute;
+		right: -15%;
+		top: 0;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		img{
+			max-width: none;
+		}
+		svg{
+			max-height: 100%;
+			height: 100%;
+		    left: 0;
+		    position: absolute;
+		    top: 0;
+		    width: 2500px; //find a decent fix + add mobile styles
+		}
+	}
+	@media (min-width: @screen-super-large-desktop) {
+		right: -20%;
+	}
 }
+
+//Svg on macbook stuff
+.macbook{
+		
+	    img{
+	    	max-height: 100%;
+	    }
+	}
+
+
 
 .special{
 	.graylighter();
@@ -810,20 +850,185 @@ header{
 //animated styles... nog verplaatsen naar apart less bestand
 .animated{
 	height: 100%;
+	.container{
+		padding-top: 3em;
+	}
 }
 
 .animated-title{
-	height: 50%;
-	background: url("../img/water-blur.jpg") no-repeat left top;
+	height: 60%;
+	position: relative;
+	background: url("../img/water-leeg.jpg") repeat-y left top;
+	-webkit-animation: wateranimation 80s linear infinite;
+	-moz-animation: wateranimation 80s linear infinite;
+	-ms-animation: wateranimation 80s linear infinite;
+	-o-animation: wateranimation 80s linear infinite;
+	animation: wateranimation 80s linear infinite;
 	.background-size(cover);
+	.board{
+		background-position: 35% 110%;
+		-webkit-animation: boardanimation 10s  ease-in-out infinite;
+		-moz-animation: boardanimation  10s ease-in-out infinite;
+		-ms-animation: boardanimation 10s ease-in-out infinite;
+		-o-animation: boardanimation  10s ease-in-out infinite;
+		animation: boardanimation  10s ease-in-out infinite;
+	}
+	.board-1{
+		background: url("../img/boards/board-2.png") no-repeat;
+		-webkit-animation-delay: 1.7s;
+		-moz-animation-delay: 1.7s;
+		-ms-animation-delay: 1.7s;
+		-o-animation-delay: 1.7s;
+		animation-delay: 1.7s;
+		}
+	.board-2{
+		background: url("../img/boards/board-4.png") no-repeat;
+		-webkit-animation-delay: 0s;
+		-moz-animation-delay: 0s;
+		-ms-animation-delay: 0s;
+		-o-animation-delay: 0s;
+		animation-delay: 0s;
+	}
 	.container{
-		background: url("../img/surfboards.png") no-repeat left bottom;
 		height: 100%;
 	}
 }
 
+@keyframes "wateranimation" {
+ 0% {
+    background-position: 0% 600%;
+ }
+ 100% {
+    background-position: 5% 0%;
+ }
+
+}
+
+@-moz-keyframes wateranimation {
+ 0% {
+   background-position: 0% 600%;
+ }
+ 100% {
+   background-position: 0% 0%;
+ }
+
+}
+
+@-webkit-keyframes "wateranimation" {
+ 0% {
+   background-position: 0% 600%;
+ }
+ 100% {
+   background-position: 0% 0%;
+ }
+
+}
+
+@-ms-keyframes "wateranimation" {
+ 0% {
+   background-position: 0% 600%;
+ }
+ 100% {
+   background-position: 0% 0%;
+ }
+
+}
+
+@-o-keyframes "wateranimation" {
+ 0% {
+   background-position: 0% 600%;
+ }
+ 100% {
+   background-position: 0% 0%;
+ }
+
+}
+
+
+@keyframes "boardanimation" {
+ 0% {
+    background-position: 35% 80%;
+ }
+ 30% {
+    background-position: 30% 40%;
+ }
+ 60% {
+    background-position: 40% 30%;
+ }
+ 100% {
+    background-position: 35% 80%;
+ }
+
+}
+
+@-moz-keyframes boardanimation {
+ 0% {
+   background-position: 35% 140%;
+ }
+ 30% {
+   background-position: 25% 180%;
+ }
+ 60% {
+   background-position: 45% 210%;
+ }
+ 100% {
+   background-position: 35% 140%;
+ }
+
+}
+
+@-webkit-keyframes "boardanimation" {
+  0% {
+   background-position: 35% 130%;
+ }
+ 30% {
+   background-position: 25% 160%;
+ }
+ 60% {
+   background-position: 45% 190%;
+ }
+ 100% {
+   background-position: 35% 130%;
+ }
+
+}
+
+@-ms-keyframes "boardanimation" {
+ 0% {
+   background-position: 35% 80%;
+ }
+ 30% {
+   background-position: 30% 10%;
+ }
+ 60% {
+   background-position: 40% 30%;
+ }
+ 100% {
+   background-position: 35% 80%;
+ }
+
+}
+
+@-o-keyframes "boardanimation" {
+ 0% {
+   background-position: 35% 80%;
+ }
+ 30% {
+   background-position: 30% 10%;
+ }
+ 60% {
+   background-position: 40% 30%;
+ }
+ 100% {
+   background-position: 35% 80%;
+ }
+
+}
+
+
 
 .responsive{
+	padding-top: 6em;
 	&.phones{
 		background: url("../img/iphones.jpg") no-repeat center center;
 		height: 100%;
